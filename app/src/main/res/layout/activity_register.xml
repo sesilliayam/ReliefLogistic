@@ -259,9 +259,40 @@
 
                 </RelativeLayout>
 
+                <Button
+                    android:id="@+id/btn_regist"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/relativeAgreement"
+                    android:layout_marginTop="25dp"
+                    android:background="@drawable/shape_rounded_primary"
+                    android:text="REGISTER"
+                    android:textColor="@color/white"/>
+
+                <RelativeLayout
+                    android:id="@+id/relativeConfirmationMember"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/btn_regist"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/txt_already"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Already a member? "/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="LOGIN"
+                        android:layout_toRightOf="@id/txt_already"
+                        android:textColor="@color/colorPrimary"/>
+
+                </RelativeLayout>
+
             </RelativeLayout>
-
-
 
         </RelativeLayout>
 
