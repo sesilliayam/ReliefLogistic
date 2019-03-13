@@ -13,7 +13,7 @@ public class FAQAdapter extends RecyclerView.Adapter<FAQAdapter.FAQAdapterViewHo
 
     @Override
     public FAQAdapterViewHolder(View view){
-        super(view)
+        super(view);
         TextView txt_tanya = (TextView) view.findViewById(R.id.txt_tanya);
         TextView txt_jawab = (TextView) view.findViewById(R.id.txt_jawab);
     }
