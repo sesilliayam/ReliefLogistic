@@ -31,8 +31,12 @@
                     android:id="@+id/ic_fullname"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:src="@drawable/ic_fullname"
+                    android:src="@drawable/ic_regist"
                     />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="REGISTER"/>
 
             </LinearLayout>
 
