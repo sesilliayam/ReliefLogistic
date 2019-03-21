@@ -13,7 +13,7 @@ import android.widget.Toast;
 
 import java.util.Locale;
 
-public class profile extends AppCompatActivity {
+public class Profile extends AppCompatActivity {
     private TextInputEditText txtDisplayName, txtUsername, txtEmail, txtPhone, txtAddress;
     private String DisplayName, Username, Email, Phone, Address;
     private ProgressDialog loading;
