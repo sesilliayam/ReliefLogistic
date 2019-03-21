@@ -1,8 +1,10 @@
 package com.delisar.relo;
 
+import android.content.Intent;
 import android.content.res.Resources;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.os.Handler;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.animation.AnimationSet;
 import android.view.animation.AnimationUtils;
@@ -17,37 +19,46 @@ public class SplashScreen extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash_screen);
+        setContentView( R.layout.activity_splash_screen);
 
-        getSupportActionBar().hide();
+//        getSupportActionBar().hide();
 
-        viewProgress = findViewById(R.id.view_progress);
+        viewProgress = findViewById( R.id.view_progress);
         int viewWidth = viewProgress.getWidth();
 
-        TranslateAnimation move = new TranslateAnimation(-(getScreenWidth() / 2) + viewWidth / 2, (getScreenWidth() / 2) + viewWidth / 2 + viewWidth, 0, 0);
+        TranslateAnimation move = new TranslateAnimation (-(getScreenWidth() / 2) + viewWidth / 2, (getScreenWidth() / 2) + viewWidth / 2 + viewWidth, 0, 0);
         move.setDuration(1000);
-        TranslateAnimation move1 = new TranslateAnimation(-viewWidth, 0, 0, 0);
+        TranslateAnimation move1 = new TranslateAnimation (-viewWidth, 0, 0, 0);
         move1.setDuration(500);
-        ScaleAnimation laftOut = new ScaleAnimation(0, 1, 1, 1);
+        ScaleAnimation laftOut = new ScaleAnimation (0, 1, 1, 1);
         laftOut.setDuration(500);
 
-        animationSet = new AnimationSet(true);
+        animationSet = new AnimationSet (true);
         animationSet.addAnimation(move);
         animationSet.addAnimation(move1);
         animationSet.addAnimation(laftOut);
-        animationSet.addAnimation(AnimationUtils.loadAnimation(getApplicationContext(), R.anim.slideout));
+        animationSet.addAnimation( AnimationUtils.loadAnimation(getApplicationContext(), R.anim.slideout));
 
         startAnimation();
+        new Handler ().postDelayed( new Runnable() {
+            @Override
+            public void run() {
+                startActivity(new Intent(SplashScreen.this,LoginActivity.class));
+                finish ();
+            }
+        },2000);
+
     }
 
     private void startAnimation() {
         viewProgress.startAnimation(animationSet);
-        new android.os.Handler().postDelayed(new Runnable() {
+        new android.os.Handler().postDelayed(new Runnable () {
             @Override
             public void run() {
                 startAnimation();
+
             }
-        }, 1000);
+        }, 2000);
     }
 
     public static int getScreenWidth() {
