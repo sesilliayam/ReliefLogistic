@@ -1,43 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".SplashScreen">
 
-    <ImageView
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffa502"/>
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#ffa502"
-        android:scaleType="centerCrop" />
+        android:alpha="0.9"/>
 
     <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="385dp"
-        android:layout_height="326dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="@dimen/activity_horizontal_margin"
-        android:layout_marginTop="73dp"
-        app:srcCompat="@drawable/splash" />
+        android:layout_width="187dp"
+        android:layout_height="157dp"
+        android:layout_above="@+id/title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-27dp"
+        android:src="@drawable/splash" />
 
-    <FrameLayout
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/title"
+        style="@style/TextAppearance.AppCompat.Headline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="serif-monospace"
+        android:text="R E L O"
+        android:textColor="#f0f0f0"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:fontFamily="sans-serif-light" />
+
+    <TextView
+        style="@style/TextAppearance.AppCompat.Caption"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginLeft="125px"
-        android:layout_marginRight="125px"
-        android:layout_marginBottom="110dp"
-        android:background="#ffa502"
-        android:padding="5dp">
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="30dp"
+        android:fontFamily="serif-monospace"
+        android:text="Copyright by RELO"
+        android:textColor="#f0f0f0"
+        android:textStyle="bold" />
 
-        <View
-            android:id="@+id/view_progress"
-            android:layout_width="250px"
-            android:layout_height="20dp"
-            android:layout_gravity="center"
-            android:background="#f0f0f0" />
-    </FrameLayout>
 </RelativeLayout>
