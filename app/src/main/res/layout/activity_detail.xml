@@ -22,7 +22,7 @@
             android:layout_height="wrap_content"
             android:layout_alignBottom="@id/communityImageDetail"
             android:padding="16dp"
-            android:text="@string/title_placeholder"
+            android:text="test"
             android:theme="@style/ThemeOverlay.AppCompat.Dark" />
 
         <TextView
@@ -32,7 +32,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/communityImageDetail"
             android:padding="16dp"
-            android:text="@string/news_placeholder"
+            android:text="test"
             android:textColor="?android:textColorSecondary" />
 
         <TextView
@@ -42,7 +42,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/newsTitleDetail"
             android:padding="16dp"
-            android:text="@string/subtitle_detail_text" />
+            android:text="test" />
 
     </RelativeLayout>
 </ScrollView>

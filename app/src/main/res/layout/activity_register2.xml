@@ -54,43 +54,77 @@
                 android:layout_marginTop="30dp"
                 android:layout_marginLeft="25dp"
                 android:layout_marginRight="25dp">
+
                 <RelativeLayout
-                    android:id="@+id/relativeEmail"
+                    android:id="@+id/relativeFullname"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="25dp">
+                    android:layout_marginBottom="20dp">
 
                     <ImageView
-                        android:id="@+id/ic_email"
+                        android:id="@+id/ic_fullname"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:src="@drawable/ic_email"
+                        android:src="@drawable/ic_fullname"
                         android:background="@drawable/shape_square_primary"
                         android:padding="8dp"
                         android:tint="@color/white"/>
 
                     <EditText
-                        android:id="@+id/edit_email"
+                        android:id="@+id/edit_fullname"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_alignParentTop="true"
-                        android:layout_alignBottom="@+id/ic_email"
-                        android:layout_alignBaseline="@+id/ic_email"
-                        android:layout_toRightOf="@id/ic_email"
+                        android:layout_alignBottom="@+id/ic_fullname"
+                        android:layout_alignBaseline="@+id/ic_fullname"
+                        android:layout_toRightOf="@id/ic_fullname"
                         android:background="@color/editText"
-                        android:hint="Email"
+                        android:hint="Fullname"
                         android:paddingLeft="10dp"
                         android:textSize="15sp"
+                        android:textColor="@color/editHint"
                         />
 
                 </RelativeLayout>
 
+                <RelativeLayout
+                    android:id="@+id/relativeUsername"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/relativeFullname"
+                    android:layout_marginBottom="20dp">
+
+                    <ImageView
+                        android:id="@+id/ic_username"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_username"
+                        android:background="@drawable/shape_square_primary"
+                        android:padding="8dp"
+                        android:tint="@color/white"/>
+
+                    <EditText
+                        android:id="@+id/edit_username"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignBottom="@+id/ic_username"
+                        android:layout_alignBaseline="@+id/ic_username"
+                        android:layout_toRightOf="@id/ic_username"
+                        android:background="@color/editText"
+                        android:hint="Username"
+                        android:paddingLeft="10dp"
+                        android:textSize="15sp"
+                        android:textColor="@color/editHint"
+                        />
+
+                </RelativeLayout>
 
                 <RelativeLayout
                     android:id="@+id/relativePassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/relativeEmail"
+                    android:layout_below="@id/relativeUsername"
                     android:layout_marginBottom="20dp">
 
                     <ImageView
@@ -115,6 +149,7 @@
                         android:inputType="textPassword"
                         android:paddingLeft="10dp"
                         android:textSize="15sp"
+                        android:textColor="@color/editHint"
                         />
 
                 </RelativeLayout>
@@ -148,17 +183,49 @@
                         android:inputType="textPassword"
                         android:paddingLeft="10dp"
                         android:textSize="15sp"
+                        android:textColor="@color/editHint"
                         />
 
                 </RelativeLayout>
 
+                <RelativeLayout
+                    android:id="@+id/relativeEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/relativeConfirmPass"
+                    android:layout_marginBottom="25dp">
 
+                    <ImageView
+                        android:id="@+id/ic_email"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_email"
+                        android:background="@drawable/shape_square_primary"
+                        android:padding="8dp"
+                        android:tint="@color/white"/>
+
+                    <EditText
+                        android:id="@+id/edit_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignBottom="@+id/ic_email"
+                        android:layout_alignBaseline="@+id/ic_email"
+                        android:layout_toRightOf="@id/ic_email"
+                        android:background="@color/editText"
+                        android:hint="Email"
+                        android:paddingLeft="10dp"
+                        android:textSize="15sp"
+                        android:textColor="@color/editHint"
+                        />
+
+                </RelativeLayout>
 
                 <RelativeLayout
                     android:id="@+id/relativeAgreement"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/relativeConfirmPass">
+                    android:layout_below="@id/relativeEmail">
 
                     <CheckBox
                         android:id="@+id/check_agreement"
@@ -180,7 +247,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Term of Service"
-                        android:onClick="toTerm"
                         android:layout_toRightOf="@id/txt_agree"
                         android:layout_alignBaseline="@id/check_agreement"
                         android:layout_alignBottom="@id/check_agreement"

@@ -15,16 +15,12 @@
       },
       "oauth_client": [
         {
-          "client_id": "440359221078-jgvh5f2pb14qm7pn8rcndmjuhbkejjoi.apps.googleusercontent.com",
+          "client_id": "440359221078-92c13ncr5nr04dqt8hg9t5ntt5c46q9q.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.delisar.relo",
             "certificate_hash": "0645f6bf76a49f3b78c006fd5cea751dc3e850c0"
           }
-        },
-        {
-          "client_id": "440359221078-s1v7prmcmaqsg4uvkviv1acfhv2244ct.apps.googleusercontent.com",
-          "client_type": 3
         }
       ],
       "api_key": [
@@ -33,20 +29,13 @@
         }
       ],
       "services": {
-        "analytics_service": {
-          "status": 1
-        },
         "appinvite_service": {
-          "status": 2,
           "other_platform_oauth_client": [
             {
               "client_id": "440359221078-s1v7prmcmaqsg4uvkviv1acfhv2244ct.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
-        },
-        "ads_service": {
-          "status": 2
         }
       }
     }
