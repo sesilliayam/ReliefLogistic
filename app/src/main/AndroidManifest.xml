@@ -13,10 +13,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"></activity>
         <activity android:name=".TermOfUse" />
         <activity
-            android:name="com.sesilliafajar.relo_bckp.Dashboard"
+            android:name="com.delisar.relo.MainActivity"
             android:label="@string/title_activity_dashboard"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Register" />

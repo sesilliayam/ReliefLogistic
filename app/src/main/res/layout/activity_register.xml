@@ -169,11 +169,11 @@
                         android:id="@+id/txt_agree"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="I Agree of the "
-                        android:layout_toRightOf="@id/check_agreement"
                         android:layout_alignBaseline="@id/check_agreement"
                         android:layout_alignBottom="@id/check_agreement"
-                        android:textSize="15sp"/>
+                        android:layout_toRightOf="@id/check_agreement"
+                        android:text="I Agree the "
+                        android:textSize="15sp" />
 
                     <TextView
                         android:id="@+id/txt_term"
