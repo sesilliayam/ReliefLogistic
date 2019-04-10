@@ -1,0 +1,243 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/linearHead"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@color/colorPrimary"
+        android:paddingBottom="20dp"
+        android:paddingTop="20dp">
+
+        <ImageView
+            android:id="@+id/ic_regist"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_regist"
+            android:tint="@color/white"/>
+        <TextView
+            android:id="@+id/txt_regist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="REGISTRASI"
+            android:textSize="22sp"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_below="@+id/linearHead">
+
+        <RelativeLayout
+            android:id="@+id/relativeHead"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/relativeContentRegist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp">
+                <RelativeLayout
+                    android:id="@+id/relativeEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="25dp">
+
+                    <ImageView
+                        android:id="@+id/ic_email"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_email"
+                        android:background="@drawable/shape_square_primary"
+                        android:padding="8dp"
+                        android:tint="@color/white"/>
+
+                    <EditText
+                        android:id="@+id/edit_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignBottom="@+id/ic_email"
+                        android:layout_alignBaseline="@+id/ic_email"
+                        android:layout_toRightOf="@id/ic_email"
+                        android:background="@color/editText"
+                        android:hint="Email"
+                        android:paddingLeft="10dp"
+                        android:textSize="15sp"
+                        />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/relativePassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/relativeEmail"
+                    android:layout_marginBottom="20dp">
+
+                    <ImageView
+                        android:id="@+id/ic_password"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_pass"
+                        android:background="@drawable/shape_square_primary"
+                        android:padding="8dp"
+                        android:tint="@color/white"/>
+
+                    <EditText
+                        android:id="@+id/edit_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignBottom="@+id/ic_password"
+                        android:layout_alignBaseline="@+id/ic_password"
+                        android:layout_toRightOf="@id/ic_password"
+                        android:background="@color/editText"
+                        android:hint="Password"
+                        android:inputType="textPassword"
+                        android:paddingLeft="10dp"
+                        android:textSize="15sp"
+                        />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relativeConfirmPass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/relativePassword"
+                    android:layout_marginBottom="20dp">
+
+                    <ImageView
+                        android:id="@+id/ic_conpass"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_conpass"
+                        android:background="@drawable/shape_square_primary"
+                        android:padding="8dp"
+                        android:tint="@color/white"/>
+
+                    <EditText
+                        android:id="@+id/edit_conpass"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignBottom="@+id/ic_conpass"
+                        android:layout_alignBaseline="@+id/ic_conpass"
+                        android:layout_toRightOf="@id/ic_conpass"
+                        android:background="@color/editText"
+                        android:hint="Confirm Password"
+                        android:inputType="textPassword"
+                        android:paddingLeft="10dp"
+                        android:textSize="15sp"
+                        />
+
+                </RelativeLayout>
+
+
+
+                <RelativeLayout
+                    android:id="@+id/relativeAgreement"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/relativeConfirmPass">
+
+                    <CheckBox
+                        android:id="@+id/check_agreement"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/txt_agree"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@id/check_agreement"
+                        android:layout_alignBottom="@id/check_agreement"
+                        android:layout_toRightOf="@id/check_agreement"
+                        android:text="I Agree the "
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/txt_term"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Term of Service"
+                        android:onClick="toTerm"
+                        android:layout_toRightOf="@id/txt_agree"
+                        android:layout_alignBaseline="@id/check_agreement"
+                        android:layout_alignBottom="@id/check_agreement"
+                        android:textSize="15sp"
+                        android:textColor="@color/colorPrimary"/>
+
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/btn_regist"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/relativeAgreement"
+                    android:layout_marginTop="25dp"
+                    android:background="@drawable/shape_rounded_primary"
+                    android:text="REGISTER"
+                    android:textColor="@color/white"/>
+
+                <RelativeLayout
+                    android:id="@+id/relativeConfirmationMember"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/btn_regist"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/txt_already"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Already a member? "/>
+
+                    <TextView
+                        android:id="@+id/txt_to_login"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="-2dp"
+                        android:layout_toRightOf="@id/txt_already"
+                        android:text="LOGIN"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold"
+                        android:onClick="toLogin"/>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center|bottom"
+        android:layout_marginBottom="20dp"
+        android:visibility="gone" />
+
+</RelativeLayout>

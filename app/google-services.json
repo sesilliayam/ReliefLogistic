@@ -1,0 +1,44 @@
+{
+  "project_info": {
+    "project_number": "440359221078",
+    "firebase_url": "https://relieflogistic-634d4.firebaseio.com",
+    "project_id": "relieflogistic-634d4",
+    "storage_bucket": "relieflogistic-634d4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:440359221078:android:cc6f6d657988fb43",
+        "android_client_info": {
+          "package_name": "com.delisar.relo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "440359221078-92c13ncr5nr04dqt8hg9t5ntt5c46q9q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.delisar.relo",
+            "certificate_hash": "0645f6bf76a49f3b78c006fd5cea751dc3e850c0"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZkhbgQBF0BDKPmosr9nlWU9qQyMzUSw8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "440359221078-s1v7prmcmaqsg4uvkviv1acfhv2244ct.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
