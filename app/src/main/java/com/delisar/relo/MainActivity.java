@@ -8,20 +8,24 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     List<News> newsList;
     RecyclerView recyclerView;
-    FloatingActionButton faba, fabb, fabc, fabd;
-    private boolean isFABOpen = true;
+    private Boolean isFabOpen = false;
+    private FloatingActionButton fab,fab1,fab2, fab3, fab4, fab5, fab6;
+    private Animation fab_open,fab_close,rotate_forward,rotate_backward;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,36 +37,35 @@ public class MainActivity extends AppCompatActivity {
         //Remove Default Title
         getSupportActionBar ().setDisplayShowTitleEnabled ( false );
 
-        //Get Custom Title
-        TextView mTitle = (TextView) toolbar.findViewById ( R.id.toolbar_title );
+
+        //Untuk Floating Button Menu
+        fab = (FloatingActionButton)findViewById(R.id.fab);
+        fab1 = (FloatingActionButton)findViewById(R.id.fab1);
+        fab2 = (FloatingActionButton)findViewById(R.id.fab2);
+        fab3 = (FloatingActionButton) findViewById(R.id.fab3);
+        fab4 = (FloatingActionButton) findViewById(R.id.fab4);
+        fab5 = (FloatingActionButton) findViewById(R.id.fab5);
+        fab6 = (FloatingActionButton) findViewById(R.id.fab6);
 
         //Floating Button Transaksi
-        FloatingActionButton fab2 = findViewById ( R.id.fab2 );
-        FloatingActionButton faba = findViewById ( R.id.faba );
-        FloatingActionButton fabb = findViewById ( R.id.fabb );
-        FloatingActionButton fabc = findViewById ( R.id.fabc );
-        FloatingActionButton fabd = findViewById ( R.id.fabd );
-
-        fab2.setOnClickListener ( new View.OnClickListener () {
+        fab6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (!isFABOpen) {
-                    showFABMenu ();
-                } else {
-                    closeFABMenu ();
-                }
+                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
             }
-        } );
+        });
 
-
-        //Floating Button Menu
-        FloatingActionButton fab1 = findViewById ( R.id.fab1 );
-        fab1.setOnClickListener ( new View.OnClickListener () {
-            @Override
-            public void onClick(View view) {
-                startActivity ( new Intent(MainActivity.this, LoginActivity.class) );
-        }
-        } );
+        fab_open = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fab_open);
+        fab_close = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.fab_close);
+        rotate_forward = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.rotate_forward);
+        rotate_backward = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.rotate_backward);
+        fab.setOnClickListener(this);
+        fab1.setOnClickListener(this);
+        fab2.setOnClickListener(this);
+        fab3.setOnClickListener(this);
+        fab4.setOnClickListener(this);
+        fab5.setOnClickListener(this);
 
         recyclerView = (RecyclerView) findViewById ( R.id.recyclerView );
         recyclerView.setHasFixedSize ( true );
@@ -105,21 +108,63 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected ( item );
     }
 
-    private void showFABMenu() {
-        boolean isFABOpen = true;
-        faba.animate ().translationY ( -getResources ().getDimension ( R.dimen.standard_55 ) );
-        fabb.animate ().translationY ( -getResources ().getDimension ( R.dimen.standard_105 ) );
-        fabc.animate ().translationY ( -getResources ().getDimension ( R.dimen.standard_155 ) );
-        fabd.animate ().translationY ( -getResources ().getDimension ( R.dimen.standard_205 ) );
-
+    @Override
+    public void onClick(View v) {
+        int id = v.getId();
+        switch (id){
+            case R.id.fab:
+                animateFAB();
+                break;
+            case R.id.fab1:
+                Log.d("FAB1", "Fab 1");
+                break;
+            case R.id.fab2:
+                Log.d("FAB2", "Fab 2");
+                break;
+            case R.id.fab3:
+                Log.d("FAB3", "Fab 3");
+                break;
+            case R.id.fab4:
+                Log.d("FAB4", "Fab 4");
+                break;
+            case R.id.fab5:
+                Log.d("FAB5", "Fab 5");
+                break;
+        }
     }
 
-    private void closeFABMenu() {
-        boolean isFABOpen = false;
-        faba.animate ().translationY ( 0 );
-        fabb.animate ().translationY ( 0 );
-        fabc.animate ().translationY ( 0 );
-        fabd.animate ().translationY ( 0 );
+    public void animateFAB(){
+        if(isFabOpen){
+            fab.startAnimation(rotate_backward);
+            fab1.startAnimation(fab_close);
+            fab2.startAnimation(fab_close);
+            fab3.startAnimation(fab_close);
+            fab4.startAnimation(fab_close);
+            fab5.startAnimation(fab_close);
+            fab1.setClickable(false);
+            fab2.setClickable(false);
+            fab3.setClickable(false);
+            fab4.setClickable(false);
+            fab5.setClickable(false);
+
+            isFabOpen = false;
+            Log.d("FAB", "close");
+        } else {
+            fab.startAnimation(rotate_forward);
+            fab1.startAnimation(fab_open);
+            fab2.startAnimation(fab_open);
+            fab3.startAnimation(fab_open);
+            fab4.startAnimation(fab_open);
+            fab5.startAnimation(fab_open);
+            fab1.setClickable(true);
+            fab2.setClickable(true);
+            fab3.setClickable(true);
+            fab4.setClickable(true);
+            fab5.setClickable(true);
+
+            isFabOpen = true;
+            Log.d("FAB","open");
+        }
     }
 }
 
