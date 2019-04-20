@@ -35,8 +35,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Toolbar toolbar = findViewById ( R.id.toolbar );
         setSupportActionBar ( toolbar ); //WHY KAMU BUAT ERROR:(
         //Remove Default Title
-        getSupportActionBar ().setDisplayShowTitleEnabled ( false );
-
+//        getSupportActionBar ().setDisplayShowTitleEnabled ( false );
+        getSupportActionBar().setTitle("Home");
 
         //Untuk Floating Button Menu
         fab = (FloatingActionButton)findViewById(R.id.fab);
@@ -102,7 +102,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         int id = item.getItemId ();
 
         if (id == R.id.notif) {
-            Intent inten = new Intent ( this, Profile.class );
+            Intent inten = new Intent ( this, Profile2.class );
             this.startActivity ( inten );
             return true;
         }
@@ -117,7 +117,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 animateFAB();
                 break;
             case R.id.fab1:
-                Intent intent = new Intent (MainActivity.this, Test.class);
+                //fab profile
+                Intent intent = new Intent (MainActivity.this, Profile2.class);
                 startActivity(intent);
                 Log.d("FAB1", "Fab 1");
                 break;
