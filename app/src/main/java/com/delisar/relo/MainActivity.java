@@ -47,6 +47,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         fab5 = (FloatingActionButton) findViewById(R.id.fab5);
         fab6 = (FloatingActionButton) findViewById(R.id.fab6);
 
+
         //Floating Button Transaksi
         fab6.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -116,6 +117,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 animateFAB();
                 break;
             case R.id.fab1:
+                Intent intent = new Intent (MainActivity.this, Test.class);
+                startActivity(intent);
                 Log.d("FAB1", "Fab 1");
                 break;
             case R.id.fab2:
