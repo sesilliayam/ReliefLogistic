@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-public class Profile2 extends AppCompatActivity {
+public class ProfileMain extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -13,7 +13,7 @@ public class Profile2 extends AppCompatActivity {
         setContentView ( R.layout.activity_profile );
     }
     public void toMain(View view){
-        Intent intent = new Intent ( Profile2.this, MainActivity.class );
+        Intent intent = new Intent ( ProfileMain.this, DashboardMain.class );
         startActivity ( intent );
         finish ();
     }

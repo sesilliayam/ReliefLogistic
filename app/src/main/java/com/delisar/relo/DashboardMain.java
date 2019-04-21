@@ -14,15 +14,12 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
-    RecyclerView recyclerView;
-    FAQAdapter adapter;
-    ArrayList<FAQ> FAQArrayList;
+public class DashboardMain extends AppCompatActivity implements View.OnClickListener{
+
     List<News> newsList;
     RecyclerView recyclerView;
     private Boolean isFabOpen = false;
@@ -37,8 +34,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Toolbar toolbar = findViewById ( R.id.toolbar );
         setSupportActionBar ( toolbar ); //WHY KAMU BUAT ERROR:(
         //Remove Default Title
-//        getSupportActionBar ().setDisplayShowTitleEnabled ( false );
-        getSupportActionBar().setTitle("Home");
+        getSupportActionBar ().setDisplayShowTitleEnabled ( false );
+
 
         //Untuk Floating Button Menu
         fab = (FloatingActionButton)findViewById(R.id.fab);
@@ -90,18 +87,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         DashboardAdapter adapter = new DashboardAdapter ( this, newsList );
         recyclerView.setAdapter ( adapter );
 
-        //faq
-        addData();
-
-        recyclerView = (RecyclerView) findViewById(R.id.recycleView);
-
-        adapter = new FAQAdapter(FAQArrayList);
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(MainActivity.this);
-
-        recyclerView.setLayoutManager(layoutManager);
-
-        recyclerView.setAdapter(adapter);
-
     }
 
     @Override
@@ -116,7 +101,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         int id = item.getItemId ();
 
         if (id == R.id.notif) {
-            Intent inten = new Intent ( this, Profile2.class );
+            Intent inten = new Intent ( this, ProfileMain.class );
             this.startActivity ( inten );
             return true;
         }
@@ -131,13 +116,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 animateFAB();
                 break;
             case R.id.fab1:
-                //fab profile
-                Intent intent = new Intent (MainActivity.this, Profile2.class);
+                Intent intent = new Intent (DashboardMain.this, ProfileMain.class);
                 startActivity(intent);
                 Log.d("FAB1", "Fab 1");
                 break;
             case R.id.fab2:
-                Intent intentCommunity = new Intent (MainActivity.this, CommunityMain.class);
+                Intent intentCommunity = new Intent (DashboardMain.this, CommunityMain.class);
                 startActivity(intentCommunity);
                 Log.d("FAB2", "Fab 2");
                 break;
@@ -148,6 +132,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Log.d("FAB4", "Fab 4");
                 break;
             case R.id.fab5:
+                //buat faq
+                Intent intentFAQ = new Intent (DashboardMain.this, FAQMain.class);
+                startActivity(intentFAQ);
                 Log.d("FAB5", "Fab 5");
                 break;
         }
@@ -186,12 +173,5 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Log.d("FAB","open");
         }
     }
-    private void addData() {
-        FAQArrayList = new ArrayList<>();
-        FAQArrayList.add(new FAQ("Q : Bagaimana Berdonasi dengan RELO", "A: Donasi dapat dilakukan dengan langsung mengirim Donasi kealamat yang telah di tentukan saat melakukan Check Out di Relo"));
-        FAQArrayList.add(new FAQ("Q : Apakah bisa berdonasi dengan Uang di RELO", "A: Saat ini donasi yang diterima RELo hanyalah barang"));
-    }
 }
-
-
 
