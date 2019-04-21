@@ -20,7 +20,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
-
+    RecyclerView recyclerView;
+    FAQAdapter adapter;
+    ArrayList<FAQ> FAQArrayList;
     List<News> newsList;
     RecyclerView recyclerView;
     private Boolean isFabOpen = false;
@@ -87,6 +89,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         DashboardAdapter adapter = new DashboardAdapter ( this, newsList );
         recyclerView.setAdapter ( adapter );
+
+        //faq
+        addData();
+
+        recyclerView = (RecyclerView) findViewById(R.id.recycleView);
+
+        adapter = new FAQAdapter(FAQArrayList);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(MainActivity.this);
+
+        recyclerView.setLayoutManager(layoutManager);
+
+        recyclerView.setAdapter(adapter);
 
     }
 
@@ -169,6 +183,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             isFabOpen = true;
             Log.d("FAB","open");
         }
+    }
+    private void addData() {
+        FAQArrayList = new ArrayList<>();
+        FAQArrayList.add(new FAQ("Q : Bagaimana Berdonasi dengan RELO", "A: Donasi dapat dilakukan dengan langsung mengirim Donasi kealamat yang telah di tentukan saat melakukan Check Out di Relo"));
+        FAQArrayList.add(new FAQ("Q : Apakah bisa berdonasi dengan Uang di RELO", "A: Saat ini donasi yang diterima RELo hanyalah barang"));
     }
 }
 
