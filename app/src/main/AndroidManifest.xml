@@ -16,6 +16,8 @@
         <activity android:name=".Profile2"></activity>
         <activity android:name=".Test" />
         <activity android:name=".TermOfUse" />
+        <activity android:name=".CommunityDetail"/>
+        <activity android:name=".CommunityMain"/>
         <activity
             android:name=".MainActivity"
             android:label="@string/title_activity_dashboard"

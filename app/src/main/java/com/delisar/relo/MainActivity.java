@@ -137,6 +137,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Log.d("FAB1", "Fab 1");
                 break;
             case R.id.fab2:
+                Intent intentCommunity = new Intent (MainActivity.this, CommunityMain.class);
+                startActivity(intentCommunity);
                 Log.d("FAB2", "Fab 2");
                 break;
             case R.id.fab3:
