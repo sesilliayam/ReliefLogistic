@@ -1,29 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    card_view:cardCornerRadius="6dp"
-    card_view:cardElevation="3dp"
-    card_view:cardUseCompatPadding="true">
+    android:layout_margin="8dp">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:orientation="vertical"
-        android:padding="5dp">
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/communityImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"/>
 
         <TextView
-            android:id="@+id/txt_tanya"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:id="@+id/title"
+            style="@style/TextAppearance.AppCompat.Headline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:layout_alignBottom="@id/communityImage"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark"
+            android:text="test" />
 
         <TextView
-            android:id="@+id/txt_jawab"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-    </LinearLayout>
+            android:id="@+id/newsTitle"
+            style="@style/TextAppearance.AppCompat.Subhead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/communityImage"
+            android:textColor="?android:textColorSecondary"
+            android:padding="8dp"
+            android:text="test" />
 
+        <TextView
+            android:id="@+id/subTitle"
+            style="@style/TextAppearance.AppCompat.Subhead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/newsTitle"
+            android:padding="8dp"
+            android:text="test" />
+
+    </RelativeLayout>
 </android.support.v7.widget.CardView>

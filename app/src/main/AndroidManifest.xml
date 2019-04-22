@@ -4,7 +4,7 @@
     <!-- To auto-complete the email text field in the login form with the user's emails -->
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
-    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -13,14 +13,27 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+<<<<<<< HEAD
         <activity android:name=".ForgotPassword"></activity>
         <activity android:name=".Profile" />
+=======
+        <activity android:name=".Transaksi"></activity>
+        <activity android:name=".ProfileMain" />
+        <activity android:name=".Test" />
+        <activity android:name=".TermOfUse" />
+        <activity android:name=".CommunityDetail" />
+        <activity android:name=".CommunityMain" />
+        <activity android:name=".FAQMain" />
+        <activity
+            android:name=".DashboardMain"
+            android:label="@string/title_activity_dashboard"
+            android:theme="@style/AppTheme.NoActionBar" />
+>>>>>>> 09390129ca9e98de2949eb567d2505b334129873
         <activity android:name=".Register" />
         <activity
             android:name=".LoginActivity"
             android:label="@string/title_activity_login" />
-        <activity android:name=".SplashScreen" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

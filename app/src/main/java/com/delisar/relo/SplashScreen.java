@@ -1,56 +1,45 @@
 package com.delisar.relo;
 
-import android.content.res.Resources;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.view.animation.AnimationSet;
-import android.view.animation.AnimationUtils;
-import android.view.animation.ScaleAnimation;
-import android.view.animation.TranslateAnimation;
+import android.content.Intent;
+import android.os.CountDownTimer;
+import android.view.animation.AlphaAnimation;
+import android.widget.TextView;
 
 public class SplashScreen extends AppCompatActivity {
 
-    View viewProgress;
-    AnimationSet animationSet;
+    private TextView mTitle;
+    private AlphaAnimation fadeOut;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
 
-        getSupportActionBar().hide();
+//        getSupportActionBar().hide();
 
-        viewProgress = findViewById(R.id.view_progress);
-        int viewWidth = viewProgress.getWidth();
+        //Setting SplashScreen
+        fadeOut = new AlphaAnimation(0.0f, 1.0f);
+        mTitle = (TextView)findViewById(R.id.title);
 
-        TranslateAnimation move = new TranslateAnimation(-(getScreenWidth() / 2) + viewWidth / 2, (getScreenWidth() / 2) + viewWidth / 2 + viewWidth, 0, 0);
-        move.setDuration(1000);
-        TranslateAnimation move1 = new TranslateAnimation(-viewWidth, 0, 0, 0);
-        move1.setDuration(500);
-        ScaleAnimation laftOut = new ScaleAnimation(0, 1, 1, 1);
-        laftOut.setDuration(500);
+        mTitle.startAnimation(fadeOut);
+        fadeOut.setDuration(2000);
+        fadeOut.setFillAfter(true);
 
-        animationSet = new AnimationSet(true);
-        animationSet.addAnimation(move);
-        animationSet.addAnimation(move1);
-        animationSet.addAnimation(laftOut);
-        animationSet.addAnimation(AnimationUtils.loadAnimation(getApplicationContext(), R.anim.slideout));
-
-        startAnimation();
-    }
-
-    private void startAnimation() {
-        viewProgress.startAnimation(animationSet);
-        new android.os.Handler().postDelayed(new Runnable() {
+        //              duration, interval
+        new CountDownTimer(5000, 1000) {
             @Override
-            public void run() {
-                startAnimation();
-            }
-        }, 1000);
-    }
+            public void onTick( long millisUntilFinished ) {
 
-    public static int getScreenWidth() {
-        return Resources.getSystem().getDisplayMetrics().widthPixels;
+            }
+
+            @Override
+            public void onFinish() {
+                Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+                startActivity(intent);
+                finish ();
+            }
+        }.start();
     }
 }

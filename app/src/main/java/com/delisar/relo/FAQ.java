@@ -1,10 +1,10 @@
 package com.delisar.relo;
 
-public class QnA {
+public class FAQ {
     private String tanya;
     private String jawab;
 
-    public QnA(String tanya, String jawab) {
+    public FAQ (String tanya, String jawab) {
         this.tanya = tanya;
         this.jawab = jawab;
     }
@@ -25,4 +25,3 @@ public class QnA {
         this.jawab = jawab;
     }
 }
-

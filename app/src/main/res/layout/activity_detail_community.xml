@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context="com.delisar.relo.CommunityDetail"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/communityImageDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true" />
+
+        <TextView
+            android:id="@+id/titleDetail"
+            style="@style/TextAppearance.AppCompat.Headline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/communityImageDetail"
+            android:padding="16dp"
+            android:text="Title"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark" />
+
+        <TextView
+            android:id="@+id/newsTitleDetail"
+            style="@style/TextAppearance.AppCompat.Subhead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/communityImageDetail"
+            android:padding="16dp"
+            android:text="News"
+            android:textColor="?android:textColorSecondary" />
+
+        <TextView
+            android:id="@+id/subTitleDetail"
+            style="@style/TextAppearance.AppCompat.Subhead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/newsTitleDetail"
+            android:padding="16dp"
+            android:text="Detail Text" />
+
+    </RelativeLayout>
+</ScrollView>
