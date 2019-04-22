@@ -113,7 +113,7 @@
                         android:textStyle="bold"
                         android:layout_toRightOf="@id/txt_forgot"
                         android:textColor="@color/white"
-                        android:onClick="toReset"/>
+                        android:onClick="toForgot"/>
 
                 </RelativeLayout>
 
