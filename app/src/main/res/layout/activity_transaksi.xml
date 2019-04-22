@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Transaksi"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/relative_mainTransaction"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="30dp">
+
+        <TextView
+            android:id="@+id/txt_headTransaction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Personal Data"
+            android:textColor="@color/colorPrimary"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:layout_marginBottom="20dp"/>
+
+        <RelativeLayout
+            android:id="@+id/relative_nameTransaction"
+            android:layout_below="@id/txt_headTransaction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:id="@+id/txt_nameTransaction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textSize="18dp"
+                />
+
+            <EditText
+                android:id="@+id/edt_nameTransaction"
+                android:layout_below="@id/txt_nameTransaction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relative_phoneTransaction"
+            android:layout_below="@id/relative_nameTransaction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:id="@+id/txt_phoneTransaction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Phone"
+                android:textSize="18dp"
+                />
+
+            <EditText
+                android:id="@+id/edt_phoneTransaction"
+                android:layout_below="@id/txt_phoneTransaction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relative_emailTransaction"
+            android:layout_below="@id/relative_phoneTransaction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:id="@+id/txt_emailTransaction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Email"
+                android:textSize="18dp"
+                />
+
+            <EditText
+                android:id="@+id/edt_emailTransaction"
+                android:layout_below="@id/txt_emailTransaction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relative_addressTransaction"
+            android:layout_below="@id/relative_emailTransaction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:id="@+id/txt_addressTransaction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Address"
+                android:textSize="18dp"
+                />
+
+            <EditText
+                android:id="@+id/edt_addressTransaction"
+                android:layout_below="@id/txt_addressTransaction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"/>
+
+            <TextView
+                android:id="@+id/txt_headTransaction_donation"
+                android:layout_below="@+id/edt_addressTransaction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Donation"
+                android:textColor="@color/colorPrimary"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:layout_marginBottom="20dp"/>
+
+            <TextView
+                android:id="@+id/txt_toTransaction"
+                android:layout_below="@+id/txt_headTransaction_donation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="To"
+                android:layout_marginBottom="10dp"/>
+
+            <RelativeLayout
+                android:id="@+id/relative_toCommunity"
+                android:layout_below="@+id/txt_toTransaction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:id="@+id/ic_location"
+                    android:src="@drawable/ic_location"
+                    android:tint="@color/darkGrey"
+                    android:layout_marginRight="10dp"/>
+                
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/sp_toCommunity"
+                    android:layout_toRightOf="@+id/ic_location"
+                    android:spinnerMode="dropdown"
+                    ></Spinner>
+
+
+            </RelativeLayout>
+
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

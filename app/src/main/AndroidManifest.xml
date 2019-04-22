@@ -13,12 +13,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ProfileMain"></activity>
+        <activity android:name=".Transaksi"></activity>
+        <activity android:name=".ProfileMain" />
         <activity android:name=".Test" />
         <activity android:name=".TermOfUse" />
-        <activity android:name=".CommunityDetail"/>
-        <activity android:name=".CommunityMain"/>
-        <activity android:name=".FAQMain"/>
+        <activity android:name=".CommunityDetail" />
+        <activity android:name=".CommunityMain" />
+        <activity android:name=".FAQMain" />
         <activity
             android:name=".DashboardMain"
             android:label="@string/title_activity_dashboard"

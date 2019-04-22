@@ -8,4 +8,5 @@
     <color name="editHint">#e1e1e1</color>
     <color name="transparent">#00000000</color>
     <color name="colorFAB1">#FFA502</color>
+    <color name="darkGrey">#4B4B4B</color>
 </resources>
