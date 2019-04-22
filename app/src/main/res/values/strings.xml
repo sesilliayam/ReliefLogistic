@@ -27,8 +27,10 @@
     <string name="news_placeholder">Tentang Komunitas Ini</string>
     <string name="community_info_placeholder">Disini nanti akan jadi deeeskripsi</string>
     <string name="subtitle_detail_text">disini subtitle</string>
+    <string name="forgot_password_msg">We just need your registered Email Id to sent you password reset instructions.</string>
 
-    <string-array name="community_titles">
+
+<string-array name="community_titles">
         <item>Baseball</item>
         <item>Badminton</item>
         <item>Basketball</item>
