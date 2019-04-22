@@ -5,6 +5,7 @@ import android.os.Bundle;
 
 public class ForgotPassword extends AppCompatActivity {
 
+    //this is a test comment
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate ( savedInstanceState );
