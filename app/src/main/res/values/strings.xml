@@ -76,5 +76,6 @@
         <item>@drawable/img_tennis</item>
 
     </array>
+    <string name="title_activity_maps">Map</string>
 </resources>
 
