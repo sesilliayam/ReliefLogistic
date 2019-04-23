@@ -77,7 +77,8 @@
                     android:textColor="@color/white"
                     android:textColorHint="@color/white"
                     android:layout_marginBottom="20dp"
-                    android:backgroundTint="@color/white"/>
+                    android:backgroundTint="@color/white"
+                    />
 
                 <Button
                     android:id="@+id/btn_login"
@@ -91,7 +92,8 @@
                     android:text="LOGIN"
                     android:textColor="@color/colorPrimary"
                     android:textSize="15sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    />
 
                 <RelativeLayout
                     android:id="@+id/relative_forgotPassword"
@@ -105,15 +107,20 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Forgot your Password? "
-                        android:textColor="@color/white" />
+                        android:textColor="@color/white"
+                        />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Reset Password"
-                        android:textStyle="bold"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="0dp"
                         android:layout_toRightOf="@id/txt_forgot"
+                        android:onClick="toForgot"
+                        android:text="Reset Password"
                         android:textColor="@color/white"
-                        android:onClick="toForgot"/>
+                        android:textStyle="bold"
+                        />
 
                 </RelativeLayout>
 
@@ -122,7 +129,8 @@
                     android:layout_height="wrap_content"
                     android:text="Or"
                     android:textColor="@color/white"
-                    android:textAlignment="center"/>
+                    android:textAlignment="center"
+                    />
 
                 <RelativeLayout
                     android:id="@+id/relative_dontHaveAccount"
@@ -136,15 +144,18 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Don't have an account? "
-                        android:textColor="@color/white" />
+                        android:textColor="@color/white"
+                        />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Sign Up"
-                        android:textStyle="bold"
                         android:layout_toRightOf="@id/donthave"
+                        android:onClick="toSignUp"
+                        android:text="Sign Up"
                         android:textColor="@color/white"
-                        android:onClick="toSignUp"/>
+                        android:textStyle="bold"
+                        />
 
                 </RelativeLayout>
 

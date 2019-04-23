@@ -42,7 +42,8 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/newsTitleDetail"
             android:padding="16dp"
-            android:text="Detail Text" />
+            android:text="Detail Text"
+            android:fontFamily="@font/museo"/>
 
     </RelativeLayout>
 </ScrollView>
