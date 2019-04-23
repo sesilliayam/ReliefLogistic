@@ -147,7 +147,8 @@
                         android:layout_height="20dp"
                         android:layout_marginRight="10dp"
                         android:src="@drawable/ic_location"
-                        android:tint="@color/darkGrey" />
+                        android:tint="@color/darkGrey"
+                        android:onClick="ToMaps"/>
 
                     <Spinner
                         android:id="@+id/sp_toCommunity"
