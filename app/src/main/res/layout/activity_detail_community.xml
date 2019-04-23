@@ -33,7 +33,6 @@
             android:layout_below="@id/communityImageDetail"
             android:padding="16dp"
             android:text="News"
-            android:fontFamily="@font/museo"
             android:textColor="?android:textColorSecondary" />
 
         <TextView

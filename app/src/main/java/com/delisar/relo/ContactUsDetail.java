@@ -48,27 +48,9 @@ public class ContactUsDetail extends AppCompatActivity {
 
         ImageView image = findViewById(R.id.image);
         Glide.with(this)
-                .asBitmap()
+//                .asBitmap()
                 .load(imageUrl)
                 .into(image);
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

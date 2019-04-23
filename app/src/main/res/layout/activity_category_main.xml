@@ -37,7 +37,7 @@
                     android:id="@+id/txt_category1"
                     android:layout_toRightOf="@+id/ic_category1"
                     android:layout_width="match_parent"
-                    android:layout_height="" />
+                    android:layout_height="wrap_content" />
 
             </RelativeLayout>
 
