@@ -30,7 +30,7 @@
     <string name="forgot_password_msg">We just need your registered Email Id to sent you password reset instructions.</string>
 
 
-<string-array name="community_titles">
+    <string-array name="community_titles">
         <item>Baseball</item>
         <item>Badminton</item>
         <item>Basketball</item>
