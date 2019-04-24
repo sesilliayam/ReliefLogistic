@@ -77,5 +77,6 @@
 
     </array>
     <string name="title_activity_maps">Map</string>
+    <string name="title_activity_image">ImageActivity</string>
 </resources>
 
