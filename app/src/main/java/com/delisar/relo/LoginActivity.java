@@ -11,12 +11,11 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.delisar.relo.Dashboard.DashboardMain;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-
-import org.w3c.dom.Text;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -36,7 +35,7 @@ public class LoginActivity extends AppCompatActivity {
 
         //kalo ada yang login
         if (auth.getCurrentUser () != null){
-            startActivity ( new Intent ( LoginActivity.this, MainActivity.class ) );
+            startActivity ( new Intent ( LoginActivity.this, DashboardMain.class ) );
             finish ();
         }
 
@@ -84,7 +83,7 @@ public class LoginActivity extends AppCompatActivity {
                                         Toast.makeText ( LoginActivity.this, getString ( R.string.auth_failed ), Toast.LENGTH_LONG ).show ();
                                     }
                                 } else {
-                                    Intent intent = new Intent ( LoginActivity.this, MainActivity.class );
+                                    Intent intent = new Intent ( LoginActivity.this, DashboardMain.class );
                                     startActivity ( intent );
                                     finish ();
                                 }
@@ -96,5 +95,11 @@ public class LoginActivity extends AppCompatActivity {
 
     public void toSignUp(View view){
         startActivity ( new Intent ( LoginActivity.this, Register.class ) );
+        finish ();
+    }
+
+    public void toForgot(View view){
+        startActivity ( new Intent ( LoginActivity.this, ForgotPassword.class ) );
+        finish ();
     }
 }

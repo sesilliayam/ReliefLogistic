@@ -24,7 +24,7 @@
             android:padding="8dp"
             android:layout_alignBottom="@id/communityImage"
             android:theme="@style/ThemeOverlay.AppCompat.Dark"
-            android:text="@string/title_placeholder" />
+            android:text="Title" />
 
         <TextView
             android:id="@+id/newsTitle"
@@ -34,7 +34,7 @@
             android:layout_below="@id/communityImage"
             android:textColor="?android:textColorSecondary"
             android:padding="8dp"
-            android:text="@string/news_placeholder" />
+            android:text="News" />
 
         <TextView
             android:id="@+id/subTitle"
@@ -43,7 +43,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/newsTitle"
             android:padding="8dp"
-            android:text="@string/community_info_placeholder" />
+            android:text="Community Info" />
 
     </RelativeLayout>
 </android.support.v7.widget.CardView>
