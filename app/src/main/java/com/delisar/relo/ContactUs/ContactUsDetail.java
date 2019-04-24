@@ -1,4 +1,4 @@
-package com.delisar.relo;
+package com.delisar.relo.ContactUs;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -8,6 +8,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.delisar.relo.R;
 
 /**
  * Created by User on 1/2/2018.
@@ -20,7 +21,7 @@ public class ContactUsDetail extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_contact_us_detail);
+        setContentView( R.layout.activity_contact_us_detail);
         Log.d(TAG, "onCreate: started.");
 
         getIncomingIntent();

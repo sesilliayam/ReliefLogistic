@@ -1,10 +1,12 @@
-package com.delisar.relo;
+package com.delisar.relo.ContactUs;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+
+import com.delisar.relo.R;
 
 import java.util.ArrayList;
 
@@ -19,7 +21,7 @@ public class ContactUsMain extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_contact_us_main);
+        setContentView( R.layout.activity_contact_us_main);
         Log.d(TAG, "onCreate: started.");
 
         initImageBitmaps();

@@ -1,9 +1,11 @@
-package com.delisar.relo;
+package com.delisar.relo.FAQ;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+
+import com.delisar.relo.R;
 
 import java.util.ArrayList;
 
@@ -14,7 +16,7 @@ public class FAQMain extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_faq_main);
+        setContentView( R.layout.activity_faq_main);
         addData();
 
         recyclerView = (RecyclerView) findViewById(R.id.recycleViewFAQ);

@@ -1,4 +1,4 @@
-package com.delisar.relo;
+package com.delisar.relo.FAQ;
 
 public class FAQ {
     private String tanya;

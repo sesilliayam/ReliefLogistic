@@ -1,10 +1,12 @@
-package com.delisar.relo;
+package com.delisar.relo.FAQ;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import com.delisar.relo.R;
 
 import java.util.ArrayList;
 
@@ -20,7 +22,7 @@ public class FAQAdapter extends RecyclerView.Adapter<FAQAdapter.FAQAdapterViewHo
     @Override
     public FAQAdapterViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
-        View view = layoutInflater.inflate(R.layout.layout_faq, parent, false);
+        View view = layoutInflater.inflate( R.layout.layout_faq, parent, false);
         return new FAQAdapterViewHolder(view);
     }
 

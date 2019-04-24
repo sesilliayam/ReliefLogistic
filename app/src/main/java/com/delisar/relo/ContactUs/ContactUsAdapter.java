@@ -1,4 +1,4 @@
-package com.delisar.relo;
+package com.delisar.relo.ContactUs;
 
 import android.content.Context;
 import android.content.Intent;
@@ -13,6 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.delisar.relo.R;
 
 import java.util.ArrayList;
 
@@ -38,7 +39,7 @@ public class ContactUsAdapter extends RecyclerView.Adapter<ContactUsAdapter.View
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item_contact_us, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate( R.layout.list_item_contact_us, parent, false);
         ViewHolder holder = new ViewHolder(view);
         return holder;
     }
