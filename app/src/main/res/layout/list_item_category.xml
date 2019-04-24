@@ -7,7 +7,8 @@
     android:layout_height="100dp"
     card_view:cardCornerRadius="6dp"
     card_view:cardElevation="3dp"
-    card_view:cardUseCompatPadding="true">
+    card_view:cardUseCompatPadding="true"
+    tools:context=".Category.CategoryMain">
 
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
@@ -25,6 +26,7 @@
             android:background="@drawable/shape_square_primary_soft"/>
 
         <android.support.constraint.ConstraintLayout
+            android:onClick="toDetail"
             android:id="@+id/relative_textCategory"
             android:layout_toRightOf="@id/ic_category"
             android:paddingLeft="10dp"
