@@ -1,4 +1,4 @@
-package com.delisar.relo;
+package com.delisar.relo.Dashboard;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -8,6 +8,9 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.delisar.relo.News;
+import com.delisar.relo.R;
 
 import java.util.List;
 
@@ -23,7 +26,7 @@ public class DashboardAdapter extends RecyclerView.Adapter<DashboardAdapter.News
     @Override
     public NewsViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(mContext);
-        View view = inflater.inflate(R.layout.content_dashboard, null);
+        View view = inflater.inflate( R.layout.content_dashboard, null);
         return new NewsViewHolder(view);
     }
 

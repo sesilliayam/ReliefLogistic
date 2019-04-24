@@ -1,4 +1,4 @@
-package com.delisar.relo;
+package com.delisar.relo.Community;
 
 import android.content.res.TypedArray;
 import android.os.Bundle;
@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.helper.ItemTouchHelper;
+
+import com.delisar.relo.R;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -21,7 +23,7 @@ public class CommunityMain extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dashboard_community);
+        setContentView( R.layout.activity_community_main );
         mRecyclerView = findViewById(R.id.recyclerView);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         mCommunityData = new ArrayList<> ();

@@ -10,7 +10,12 @@
          Google Maps Android API v2, but you must specify either coarse or fine
          location permissions for the 'MyLocation' functionality.
     -->
+<<<<<<< HEAD
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- To auto-complete the email text field in the login form with the user's emails -->
+=======
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+>>>>>>> e891dc99787937cf4528d12dc92ce9aba5a1c47d
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -45,20 +50,24 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
+<<<<<<< HEAD
         <activity
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps" />
         <activity android:name=".CategoryMain" />
+=======
+>>>>>>> e891dc99787937cf4528d12dc92ce9aba5a1c47d
         <activity android:name=".ForgotPassword" />
         <activity android:name=".Transaksi" />
         <activity android:name=".ProfileMain" />
         <activity android:name=".Test" />
         <activity android:name=".TermOfUse" />
-        <activity android:name=".CommunityDetail" />
-        <activity android:name=".CommunityMain" />
-        <activity android:name=".FAQMain" />
+        <activity android:name=".Community.CommunityDetail" />
+        <activity android:name=".Community.CommunityMain" />
+        <activity android:name=".FAQ.FAQMain" />
+        <activity android:name=".MapsActivity" />
         <activity
-            android:name=".DashboardMain"
+            android:name=".Dashboard.DashboardMain"
             android:label="@string/title_activity_dashboard"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Register" />

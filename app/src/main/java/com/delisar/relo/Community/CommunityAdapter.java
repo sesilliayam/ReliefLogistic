@@ -1,4 +1,4 @@
-package com.delisar.relo;
+package com.delisar.relo.Community;
 
 import android.content.Context;
 import android.content.Intent;
@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.delisar.relo.R;
 
 import java.util.ArrayList;
 
@@ -31,7 +32,7 @@ class CommunityAdapter extends RecyclerView.Adapter<CommunityAdapter.ViewHolder>
     public CommunityAdapter.ViewHolder onCreateViewHolder(
             ViewGroup parent, int viewType) {
         return new ViewHolder( LayoutInflater.from(mContext).
-                inflate(R.layout.list_item, parent, false));
+                inflate( R.layout.list_item_dashboard_news, parent, false));
     }
 
 
