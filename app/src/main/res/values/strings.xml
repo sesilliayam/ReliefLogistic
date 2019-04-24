@@ -23,6 +23,8 @@
     <string name="pertanyaan">Pertanyaan</string>
     <string name="jawaban">Jawaban</string>
 
+    <string name="title_activity_maps">Map</string>
+
     <string name="title_placeholder">Community</string>
     <string name="news_placeholder">Tentang Komunitas Ini</string>
     <string name="community_info_placeholder">Disini nanti akan jadi deeeskripsi</string>
@@ -76,5 +78,6 @@
         <item>@drawable/img_tennis</item>
 
     </array>
+
 </resources>
 
