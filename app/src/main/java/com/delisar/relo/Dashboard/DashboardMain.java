@@ -1,9 +1,8 @@
-package com.delisar.relo;
+package com.delisar.relo.Dashboard;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -14,6 +13,13 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+
+import com.delisar.relo.Community.CommunityMain;
+import com.delisar.relo.FAQ.FAQMain;
+import com.delisar.relo.News;
+import com.delisar.relo.ProfileMain;
+import com.delisar.relo.R;
+import com.delisar.relo.Transaksi;
 
 import java.util.ArrayList;
 import java.util.List;
