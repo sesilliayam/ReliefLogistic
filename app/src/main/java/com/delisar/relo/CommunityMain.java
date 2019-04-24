@@ -21,7 +21,7 @@ public class CommunityMain extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dashboard_community);
+        setContentView(R.layout.activity_community_main );
         mRecyclerView = findViewById(R.id.recyclerView);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         mCommunityData = new ArrayList<> ();

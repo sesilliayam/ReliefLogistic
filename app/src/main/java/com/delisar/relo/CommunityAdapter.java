@@ -31,7 +31,7 @@ class CommunityAdapter extends RecyclerView.Adapter<CommunityAdapter.ViewHolder>
     public CommunityAdapter.ViewHolder onCreateViewHolder(
             ViewGroup parent, int viewType) {
         return new ViewHolder( LayoutInflater.from(mContext).
-                inflate(R.layout.list_item, parent, false));
+                inflate(R.layout.list_item_dashboard_news, parent, false));
     }
 
 

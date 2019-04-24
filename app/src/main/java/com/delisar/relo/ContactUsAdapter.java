@@ -38,7 +38,7 @@ public class ContactUsAdapter extends RecyclerView.Adapter<ContactUsAdapter.View
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.layout_listitem_contact_us, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item_contact_us, parent, false);
         ViewHolder holder = new ViewHolder(view);
         return holder;
     }
