@@ -53,6 +53,7 @@
         <activity android:name=".Community.CommunityDetail" />
         <activity android:name=".Community.CommunityMain" />
         <activity android:name=".FAQ.FAQMain" />
+        <activity android:name=".Category.CategoryMain" />
         <activity
             android:name=".Dashboard.DashboardMain"
             android:label="@string/title_activity_dashboard"

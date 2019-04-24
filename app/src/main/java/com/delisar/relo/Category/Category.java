@@ -2,25 +2,25 @@ package com.delisar.relo.Category;
 
 public class Category {
 
-    private String title;
-    private String info;
+    private String categoryTitle;
+    private String categoryInfo;
 //    private final int imageResource;
 
 
     public Category(String title, String info) {
-        this.title = title;
-        this.info = info;
+        this.categoryTitle = title;
+        this.categoryInfo = info;
 //        this.imageResource = imageResource;
     }
 
 
     String getTitle() {
-        return title;
+        return categoryTitle;
     }
 
 
     String getInfo() {
-        return info;
+        return categoryInfo;
     }
 
 //    public int getImageResource() {
