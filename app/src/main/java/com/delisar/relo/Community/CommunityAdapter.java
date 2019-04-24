@@ -1,4 +1,4 @@
-package com.delisar.relo;
+package com.delisar.relo.Community;
 
 import android.content.Context;
 import android.content.Intent;
@@ -10,14 +10,17 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.delisar.relo.R;
 
 import java.util.ArrayList;
 
-class CommunityAdapter extends RecyclerView.Adapter<CommunityAdapter.ViewHolder>  {
+
+class CommunityAdapter extends RecyclerView.Adapter<CommunityAdapter.ViewHolder> {
 
 
     private ArrayList<Community> mCommunityData;
     private Context mContext;
+
 
     CommunityAdapter(Context context, ArrayList<Community> communityData) {
         this.mCommunityData = communityData;
@@ -25,12 +28,11 @@ class CommunityAdapter extends RecyclerView.Adapter<CommunityAdapter.ViewHolder>
     }
 
 
-
     @Override
     public CommunityAdapter.ViewHolder onCreateViewHolder(
             ViewGroup parent, int viewType) {
-        return new ViewHolder(LayoutInflater.from(mContext).
-                inflate(R.layout.list_item, parent, false));
+        return new ViewHolder( LayoutInflater.from(mContext).
+                inflate( R.layout.list_item_dashboard_news, parent, false));
     }
 
 
@@ -51,9 +53,8 @@ class CommunityAdapter extends RecyclerView.Adapter<CommunityAdapter.ViewHolder>
     }
 
 
-
     class ViewHolder extends RecyclerView.ViewHolder
-            implements View.OnClickListener{
+            implements View.OnClickListener {
 
 
         private TextView mTitleText;
@@ -73,7 +74,7 @@ class CommunityAdapter extends RecyclerView.Adapter<CommunityAdapter.ViewHolder>
             itemView.setOnClickListener(this);
         }
 
-        void bindTo(Community currentCommunity){
+        void bindTo(Community currentCommunity) {
 
             mTitleText.setText(currentCommunity.getTitle());
             mInfoText.setText(currentCommunity.getInfo());
@@ -84,9 +85,10 @@ class CommunityAdapter extends RecyclerView.Adapter<CommunityAdapter.ViewHolder>
         }
 
 
+        @Override
         public void onClick(View view) {
             Community currentCommunity = mCommunityData.get(getAdapterPosition());
-            Intent detailIntent = new Intent(mContext, DetailActivity.class);
+            Intent detailIntent = new Intent (mContext, CommunityDetail.class);
             detailIntent.putExtra("title", currentCommunity.getTitle());
             detailIntent.putExtra("image_resource",
                     currentCommunity.getImageResource());

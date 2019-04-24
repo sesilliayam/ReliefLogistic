@@ -1,9 +1,13 @@
-package com.delisar.relo;
+package com.delisar.relo.Community;
+
 
 class Community {
+
+
     private String title;
     private String info;
     private final int imageResource;
+
 
     public Community(String title, String info, int imageResource) {
         this.title = title;

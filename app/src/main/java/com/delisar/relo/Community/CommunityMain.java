@@ -1,4 +1,4 @@
-package com.delisar.relo;
+package com.delisar.relo.Community;
 
 import android.content.res.TypedArray;
 import android.os.Bundle;
@@ -7,10 +7,14 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.helper.ItemTouchHelper;
 
+import com.delisar.relo.R;
+
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class CommunityList extends AppCompatActivity {
+
+public class CommunityMain extends AppCompatActivity {
+
 
     private RecyclerView mRecyclerView;
     private ArrayList<Community> mCommunityData;
@@ -19,36 +23,37 @@ public class CommunityList extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_community_list);
-
+        setContentView( R.layout.activity_community_main );
         mRecyclerView = findViewById(R.id.recyclerView);
-
-
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-
-        mCommunityData = new ArrayList<>();
-
+        mCommunityData = new ArrayList<> ();
         mAdapter = new CommunityAdapter(this, mCommunityData);
         mRecyclerView.setAdapter(mAdapter);
 
+
         initializeData();
+
 
         ItemTouchHelper helper = new ItemTouchHelper(new ItemTouchHelper
                 .SimpleCallback(
-                ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT |
-                        ItemTouchHelper.DOWN | ItemTouchHelper.UP,
+                    ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT |
+                    ItemTouchHelper.DOWN | ItemTouchHelper.UP,
                 ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT) {
+
             @Override
             public boolean onMove(RecyclerView recyclerView,
                                   RecyclerView.ViewHolder viewHolder,
                                   RecyclerView.ViewHolder target) {
+
                 int from = viewHolder.getAdapterPosition();
                 int to = target.getAdapterPosition();
+
 
                 Collections.swap(mCommunityData, from, to);
                 mAdapter.notifyItemMoved(from, to);
                 return true;
             }
+
 
             @Override
             public void onSwiped(RecyclerView.ViewHolder viewHolder,
@@ -71,7 +76,7 @@ public class CommunityList extends AppCompatActivity {
                 .getStringArray(R.array.community_titles);
         String[] communityInfo = getResources()
                 .getStringArray(R.array.community_info);
-        TypedArray communityImageResources = getResources()
+        TypedArray communityImageResource = getResources()
                 .obtainTypedArray(R.array.community_images);
 
 
@@ -80,14 +85,15 @@ public class CommunityList extends AppCompatActivity {
 
         for (int i = 0; i < communityList.length; i++) {
             mCommunityData.add(new Community(communityList[i], communityInfo[i],
-                    communityImageResources.getResourceId(i, 0)));
+                    communityImageResource.getResourceId(i, 0)));
         }
 
 
-        communityImageResources.recycle();
+        communityImageResource.recycle();
 
 
         mAdapter.notifyDataSetChanged();
     }
+
 
 }
