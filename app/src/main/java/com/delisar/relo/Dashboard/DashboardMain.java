@@ -16,8 +16,8 @@ import android.view.animation.AnimationUtils;
 
 import com.delisar.relo.Community.CommunityMain;
 import com.delisar.relo.FAQ.FAQMain;
+import com.delisar.relo.ImagePickerProfile.ImageActivity;
 import com.delisar.relo.News;
-import com.delisar.relo.ProfileMain;
 import com.delisar.relo.R;
 import com.delisar.relo.Transaksi;
 
@@ -107,7 +107,7 @@ public class DashboardMain extends AppCompatActivity implements View.OnClickList
         int id = item.getItemId ();
 
         if (id == R.id.notif) {
-            Intent inten = new Intent ( this, ProfileMain.class );
+            Intent inten = new Intent ( this, ImageActivity.class );
             this.startActivity ( inten );
             return true;
         }
@@ -122,7 +122,7 @@ public class DashboardMain extends AppCompatActivity implements View.OnClickList
                 animateFAB();
                 break;
             case R.id.fab1:
-                Intent intent = new Intent (DashboardMain.this, ProfileMain.class);
+                Intent intent = new Intent (DashboardMain.this, ImageActivity.class);
                 startActivity(intent);
                 Log.d("FAB1", "Fab 1");
                 break;
