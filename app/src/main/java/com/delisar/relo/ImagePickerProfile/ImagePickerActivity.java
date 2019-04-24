@@ -1,4 +1,4 @@
-package com.delisar.relo;
+package com.delisar.relo.ImagePickerProfile;
 
 import android.Manifest;
 import android.app.Activity;
@@ -16,6 +16,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.delisar.relo.R;
 import com.karumi.dexter.Dexter;
 import com.karumi.dexter.MultiplePermissionsReport;
 import com.karumi.dexter.PermissionToken;

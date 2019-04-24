@@ -34,10 +34,10 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
         <activity
-            android:name=".ImageActivity"
+            android:name=".ImagePickerProfile.ImageActivity"
             android:label="@string/title_activity_image"
             android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".ImagePickerActivity" />
+        <activity android:name=".ImagePickerProfile.ImagePickerActivity" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -59,7 +59,6 @@
 >>>>>>> e891dc99787937cf4528d12dc92ce9aba5a1c47d
         <activity android:name=".ForgotPassword" />
         <activity android:name=".Transaksi" />
-        <activity android:name=".ProfileMain" />
         <activity android:name=".Test" />
         <activity android:name=".TermOfUse" />
         <activity android:name=".Community.CommunityDetail" />

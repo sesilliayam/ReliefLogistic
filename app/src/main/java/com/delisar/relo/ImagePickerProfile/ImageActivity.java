@@ -1,4 +1,4 @@
-package com.delisar.relo;
+package com.delisar.relo.ImagePickerProfile;
 
 import android.Manifest;
 import android.app.Activity;
@@ -17,6 +17,7 @@ import android.util.Log;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
+import com.delisar.relo.R;
 import com.karumi.dexter.Dexter;
 import com.karumi.dexter.MultiplePermissionsReport;
 import com.karumi.dexter.PermissionToken;
