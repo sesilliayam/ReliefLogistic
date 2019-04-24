@@ -9,7 +9,6 @@
     tools:showIn="@layout/activity_image"
     android:layout_margin="10dp">
 
-
     <EditText
         android:id="@+id/edUsername"
         android:layout_width="0dp"
