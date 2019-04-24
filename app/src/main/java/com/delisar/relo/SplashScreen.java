@@ -17,8 +17,6 @@ public class SplashScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
 
-//        getSupportActionBar().hide();
-
         //Setting SplashScreen
         fadeOut = new AlphaAnimation(0.0f, 1.0f);
         mTitle = (TextView)findViewById(R.id.title);
