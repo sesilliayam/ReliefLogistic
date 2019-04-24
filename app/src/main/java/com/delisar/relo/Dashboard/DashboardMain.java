@@ -14,8 +14,10 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 
+import com.delisar.relo.Category.CategoryMain;
 import com.delisar.relo.Community.CommunityMain;
 import com.delisar.relo.FAQ.FAQMain;
+import com.delisar.relo.ImagePickerProfile.ImageActivity;
 import com.delisar.relo.News;
 import com.delisar.relo.R;
 import com.delisar.relo.Transaksi;
@@ -106,7 +108,7 @@ public class DashboardMain extends AppCompatActivity implements View.OnClickList
         int id = item.getItemId ();
 
         if (id == R.id.notif) {
-            Intent inten = new Intent ( this, ProfileMain.class );
+            Intent inten = new Intent ( this, ImageActivity.class );
             this.startActivity ( inten );
             return true;
         }
@@ -121,23 +123,27 @@ public class DashboardMain extends AppCompatActivity implements View.OnClickList
                 animateFAB();
                 break;
             case R.id.fab1:
-                Intent intent = new Intent (DashboardMain.this, ProfileMain.class);
+                //profile
+                Intent intent = new Intent (DashboardMain.this, ImageActivity.class);
                 startActivity(intent);
                 Log.d("FAB1", "Fab 1");
                 break;
             case R.id.fab2:
+                //community
                 Intent intentCommunity = new Intent (DashboardMain.this, CommunityMain.class);
                 startActivity(intentCommunity);
                 Log.d("FAB2", "Fab 2");
                 break;
             case R.id.fab3:
+                //category
+                startActivity ( new Intent ( DashboardMain.this, CategoryMain.class ) );
                 Log.d("FAB3", "Fab 3");
                 break;
             case R.id.fab4:
                 Log.d("FAB4", "Fab 4");
                 break;
             case R.id.fab5:
-                //buat faq
+                //faq
                 Intent intentFAQ = new Intent (DashboardMain.this, FAQMain.class);
                 startActivity(intentFAQ);
                 Log.d("FAB5", "Fab 5");
