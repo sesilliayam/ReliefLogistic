@@ -22,6 +22,7 @@
     <string name="auth_failed">Authentication failed, check your email and password or sign up</string>
     <string name="pertanyaan">Pertanyaan</string>
     <string name="jawaban">Jawaban</string>
+    <string name="exampleDetailCategory">Barang kategori ini merupakan barang yang dapat dipakai pada jangka panjang.</string>
 
 
     <string name="title_placeholder">Community</string>
