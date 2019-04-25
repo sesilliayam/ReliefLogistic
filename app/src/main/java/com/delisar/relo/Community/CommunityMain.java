@@ -1,5 +1,6 @@
 package com.delisar.relo.Community;
 
+import android.content.SharedPreferences;
 import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -19,10 +20,21 @@ public class CommunityMain extends AppCompatActivity {
     private RecyclerView mRecyclerView;
     private ArrayList<Community> mCommunityData;
     private CommunityAdapter mAdapter;
+    boolean theme;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        SharedPreferences preferences = getSharedPreferences("prefs", MODE_PRIVATE);
+        theme = preferences.getBoolean("dark_theme", false);
+        boolean font = preferences.getBoolean("font_large", false);
+        if (theme && font) {
+            setTheme(R.style.AppTheme_Dark_FontLarge);
+        } else if (theme) {
+            setTheme(R.style.AppTheme_Dark_FontNormal);
+        } else if (font) {
+            setTheme(R.style.AppTheme_FontLarge);
+        }
         setContentView( R.layout.activity_community_main );
         mRecyclerView = findViewById(R.id.recyclerView);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));

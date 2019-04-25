@@ -1,7 +1,9 @@
 package com.delisar.relo.Dashboard;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -20,10 +22,13 @@ import com.delisar.relo.FAQ.FAQMain;
 import com.delisar.relo.ImagePickerProfile.ImageActivity;
 import com.delisar.relo.News;
 import com.delisar.relo.R;
+import com.delisar.relo.Settings.SettingActivity;
 import com.delisar.relo.Transaksi;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import android.support.design.widget.CoordinatorLayout;
 
 public class DashboardMain extends AppCompatActivity implements View.OnClickListener{
 
@@ -32,16 +37,29 @@ public class DashboardMain extends AppCompatActivity implements View.OnClickList
     private Boolean isFabOpen = false;
     private FloatingActionButton fab,fab1,fab2, fab3, fab4, fab5, fab6;
     private Animation fab_open,fab_close,rotate_forward,rotate_backward;
+    CoordinatorLayout coord_main;
+    boolean theme;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate ( savedInstanceState );
+       super.onCreate ( savedInstanceState );
+        SharedPreferences preferences = getSharedPreferences("prefs", MODE_PRIVATE);
+        theme = preferences.getBoolean("dark_theme", false);
+        boolean font = preferences.getBoolean("font_large", false);
+        if (theme && font) {
+            setTheme(R.style.AppTheme_Dark_FontLarge);
+        } else if (theme) {
+            setTheme(R.style.AppTheme_Dark_FontNormal);
+        } else if (font) {
+            setTheme(R.style.AppTheme_FontLarge);
+        }
         setContentView ( R.layout.activity_dashboard );
+
 
         Toolbar toolbar = findViewById ( R.id.toolbar );
         setSupportActionBar ( toolbar ); //WHY KAMU BUAT ERROR:(
         //Remove Default Title
-        getSupportActionBar ().setDisplayShowTitleEnabled ( false );
+//        getSupportActionBar ().setDisplayShowTitleEnabled ( false );
 
 
         //Untuk Floating Button Menu
@@ -141,6 +159,8 @@ public class DashboardMain extends AppCompatActivity implements View.OnClickList
                 break;
             case R.id.fab4:
                 Log.d("FAB4", "Fab 4");
+                Intent intentSettings = new Intent (DashboardMain.this, SettingActivity.class);
+                startActivity(intentSettings);
                 break;
             case R.id.fab5:
                 //faq

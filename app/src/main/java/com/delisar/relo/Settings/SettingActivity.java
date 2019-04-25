@@ -14,7 +14,7 @@ import android.widget.Switch;
 import com.delisar.relo.Dashboard.DashboardMain;
 import com.delisar.relo.R;
 
-class SettingsActivity extends AppCompatActivity {
+public class SettingActivity extends AppCompatActivity {
     private static final String PREFS_NAME = "prefs";
     private static final String PREF_DARK_THEME = "dark_theme";
     private static final String PREF_FONT_LARGE = "font_large" ;
@@ -30,7 +30,8 @@ class SettingsActivity extends AppCompatActivity {
             setTheme(R.style.AppTheme_Dark_FontNormal);
         } else if (font) {
             setTheme(R.style.AppTheme_FontLarge);
-        }
+        }else
+            setTheme(R.style.AppTheme);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
         if (theme) {
@@ -77,14 +78,14 @@ class SettingsActivity extends AppCompatActivity {
                 editor.putBoolean(PREF_DARK_THEME, true);
                 editor.apply();
                 recreate();
-                startActivity(new Intent (SettingsActivity.this, DashboardMain.class));
+                startActivity(new Intent (SettingActivity.this, DashboardMain.class));
                 finish();
                 break;
             case 0:
                 editor = getSharedPreferences(PREFS_NAME, MODE_PRIVATE).edit();
                 editor.putBoolean(PREF_DARK_THEME, false);
                 editor.apply();
-                startActivity(new Intent (SettingsActivity.this, DashboardMain.class));
+                startActivity(new Intent (SettingActivity.this, DashboardMain.class));
                 finish();
                 break;
         }
