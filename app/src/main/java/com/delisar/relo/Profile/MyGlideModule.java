@@ -1,4 +1,4 @@
-package com.delisar.relo.ImagePickerProfile;
+package com.delisar.relo.Profile;
 
 import com.bumptech.glide.annotation.GlideModule;
 import com.bumptech.glide.module.AppGlideModule;
