@@ -1,4 +1,4 @@
-package com.delisar.relo;
+package com.delisar.relo.PreApps;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -14,7 +14,7 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.delisar.relo.Dashboard.DashboardMain;
-import com.delisar.relo.Profile.DisplayProfile;
+import com.delisar.relo.R;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;

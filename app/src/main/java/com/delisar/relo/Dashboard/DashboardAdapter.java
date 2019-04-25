@@ -9,7 +9,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.delisar.relo.News;
 import com.delisar.relo.R;
 
 import java.util.List;
