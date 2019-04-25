@@ -92,6 +92,9 @@ dependencies {
 
     //buat login with google
     implementation 'com.google.android.gms:play-services-auth:16.0.1'
+
+    //Untuk Chat
+    implementation 'com.scaledrone:scaledrone-java:0.6.0'
 }
 
 apply plugin: 'com.google.gms.google-services'
