@@ -17,10 +17,10 @@ import android.view.animation.AnimationUtils;
 import com.delisar.relo.Category.CategoryMain;
 import com.delisar.relo.Community.CommunityMain;
 import com.delisar.relo.FAQ.FAQMain;
-import com.delisar.relo.ImagePickerProfile.ImageActivity;
+import com.delisar.relo.Profile.ImageActivity;
 import com.delisar.relo.News;
 import com.delisar.relo.R;
-import com.delisar.relo.Transaksi;
+import com.delisar.relo.Transaksi.TransaksiMain;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -54,11 +54,11 @@ public class DashboardMain extends AppCompatActivity implements View.OnClickList
         fab6 = (FloatingActionButton) findViewById(R.id.fab6);
 
 
-        //Floating Button Transaksi
+        //Floating Button TransaksiMain
         fab6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(DashboardMain.this, Transaksi.class);
+                Intent intent = new Intent(DashboardMain.this, TransaksiMain.class);
                 startActivity(intent);
             }
         });

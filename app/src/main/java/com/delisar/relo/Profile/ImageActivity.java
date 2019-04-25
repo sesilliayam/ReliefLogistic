@@ -1,4 +1,4 @@
-package com.delisar.relo.ImagePickerProfile;
+package com.delisar.relo.Profile;
 
 import android.Manifest;
 import android.app.Activity;
