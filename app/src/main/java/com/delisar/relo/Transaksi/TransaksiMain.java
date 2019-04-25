@@ -17,7 +17,7 @@ public class TransaksiMain extends AppCompatActivity {
     }
 
     public void ToMaps(View view) {
-        Intent intent = new Intent(this, MapsActivity.class);
+        Intent intent = new Intent(this, TransaksiMaps.class);
         startActivity(intent);
     }
 }
