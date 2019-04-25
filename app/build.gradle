@@ -78,6 +78,9 @@ dependencies {
 
     //buat maps
     implementation "com.google.android.gms:play-services:8.4.0"
+
+    //buat login with google
+    implementation 'com.google.android.gms:play-services-auth:16.0.1'
 }
 
 apply plugin: 'com.google.gms.google-services'
