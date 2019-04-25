@@ -31,6 +31,7 @@
             android:name=".ImagePickerProfile.ImageActivity"
             android:label="@string/title_activity_image"
             android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".Settings.SettingsActivity"></activity>
         <activity android:name=".ImagePickerProfile.ImagePickerActivity" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
