@@ -1,11 +1,14 @@
-package com.delisar.relo;
+package com.delisar.relo.Transaksi;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-public class Transaksi extends AppCompatActivity {
+import com.delisar.relo.MapsActivity;
+import com.delisar.relo.R;
+
+public class TransaksiMain extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -14,7 +17,7 @@ public class Transaksi extends AppCompatActivity {
     }
 
     public void ToMaps(View view) {
-        Intent intent = new Intent(this, MapsActivity.class);
+        Intent intent = new Intent(this, TransaksiMaps.class);
         startActivity(intent);
     }
 }
