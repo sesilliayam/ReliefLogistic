@@ -17,4 +17,7 @@
     <dimen name="dimen_40dp">40dp</dimen>
     <dimen name="ic_plus_width">28dp</dimen>
     <dimen name="icon_size">25dp</dimen>
+    <dimen name="normalText">15dp</dimen>
+    <dimen name="mediumText">18dp</dimen>
+
 </resources>

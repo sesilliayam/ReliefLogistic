@@ -12,9 +12,9 @@ import java.util.ArrayList;
 
 public class FAQAdapter extends RecyclerView.Adapter<FAQAdapter.FAQAdapterViewHolder> {
 
-    ArrayList<FAQ> FAQList;
+    ArrayList<FAQModel> FAQList;
 
-    public FAQAdapter(ArrayList<FAQ> FAQList){
+    public FAQAdapter(ArrayList<FAQModel> FAQList){
 
         this.FAQList = FAQList;
     }
@@ -43,7 +43,7 @@ public class FAQAdapter extends RecyclerView.Adapter<FAQAdapter.FAQAdapterViewHo
             txt_tanya = itemView.findViewById(R.id.txt_tanya);
             txt_jawab = itemView.findViewById(R.id.txt_jawab);
         }
-        void bind(FAQ faq){
+        void bind(FAQModel faq){
             txt_tanya.setText(faq.getTanya());
             txt_jawab.setText(faq.getJawab());
         }
