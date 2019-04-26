@@ -31,9 +31,8 @@
 <<<<<<< HEAD
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".PreApps.LogoutActivity"></activity>
-        <activity android:name=".Setting.SettingsMain" />
-        <activity android:name=".ChatActivity" />
+        <activity android:name=".Setting.SettingsMain"></activity>
+        <activity android:name=".ChatActivity"></activity>
         <activity android:name=".Profile.DisplayProfile" />
 =======
         android:theme="@style/AppTheme">
@@ -70,7 +69,6 @@
             android:name=".Transaksi.TransaksiMaps"
             android:label="@string/title_activity_transaksi_maps" />
         <activity android:name=".Test" />
-        <activity android:name=".ContactUs.ContactUsMain" />
         <activity android:name=".PreApps.TermOfUse" />
         <activity android:name=".Community.CommunityDetail" />
         <activity android:name=".Community.CommunityMain" />
