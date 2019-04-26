@@ -8,10 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.delisar.relo.DetailNews;
-import com.delisar.relo.Profile.ImageActivity;
 import com.delisar.relo.R;
 
 import java.util.List;

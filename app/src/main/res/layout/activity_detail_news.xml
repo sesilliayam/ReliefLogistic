@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".DetailNews">
+    tools:context=".Dashboard.DetailNews">
 
     <TextView
         android:id="@+id/titleDetail"
@@ -44,12 +44,31 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
-        android:text="@string/dummy"
+        android:text="@string/berita_longsor"
         android:textColor="#000000"
-        android:textSize="18sp"
+        android:textSize="@dimen/normalText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageDetail" />
+
+    <TextView
+        android:id="@+id/txt_lihatLokasi"
+        android:layout_width="match_parent"
+        android:layout_height="21dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="Lihat Lokasi Bencana Alam"
+        android:textAlignment="center"
+        android:textSize="@dimen/mediumText"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bodyDetail"
+        android:textColor="@color/colorPrimary"
+        android:onClick="toMapsBencana"/>
 
     <Button
         android:id="@+id/submit"
@@ -57,7 +76,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:background="@drawable/shape_rounded_primary"
@@ -66,7 +85,7 @@
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bodyDetail" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_lihatLokasi" />
 
 
 </android.support.constraint.ConstraintLayout>
