@@ -23,6 +23,7 @@
                 android:id="@+id/txt_headTransaction"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
                 android:layout_marginBottom="20dp"
                 android:text="Personal Data"
                 android:textColor="@color/colorPrimary"
@@ -40,6 +41,8 @@
                     android:id="@+id/txt_nameTransaction"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
                     android:text="Name"
                     android:textSize="18dp" />
 
@@ -146,16 +149,17 @@
                         android:layout_width="20dp"
                         android:layout_height="20dp"
                         android:layout_marginRight="10dp"
+                        android:onClick="ToMaps"
                         android:src="@drawable/ic_location"
-                        android:tint="@color/darkGrey"
-                        android:onClick="ToMaps"/>
+                        android:tint="@color/darkGrey" />
 
                     <Spinner
                         android:id="@+id/sp_toCommunity"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_toRightOf="@+id/ic_location"
-                        android:spinnerMode="dropdown"></Spinner>
+                        android:spinnerMode="dropdown"
+                        android:autofillHints="--- Pilih Komunitas ---"></Spinner>
 
 
                 </RelativeLayout>
