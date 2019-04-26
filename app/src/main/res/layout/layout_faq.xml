@@ -4,9 +4,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/white">
 
     <ImageView
+        android:tint="@color/colorPrimary"
         android:id="@+id/imageView"
         android:layout_width="136dp"
         android:layout_height="126dp"
@@ -14,6 +16,8 @@
         android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/faq"
@@ -21,38 +25,26 @@
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-<<<<<<< HEAD
         android:layout_height="87dp"
-=======
-        android:layout_height="83dp"
->>>>>>> e891dc99787937cf4528d12dc92ce9aba5a1c47d
         android:layout_margin="5dp"
         android:orientation="vertical"
         android:padding="5dp"
         tools:layout_editor_absoluteX="4dp"
-        tools:layout_editor_absoluteY="136dp">
+        tools:layout_editor_absoluteY="136dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView">
 
         <TextView
             android:id="@+id/txt_tanya"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-<<<<<<< HEAD
             android:padding="5dp" />
-=======
-            android:padding="5dp"
-            android:text="@string/pertanyaan" />
->>>>>>> e891dc99787937cf4528d12dc92ce9aba5a1c47d
 
         <TextView
             android:id="@+id/txt_jawab"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-<<<<<<< HEAD
             android:padding="5dp" />
-=======
-            android:padding="5dp"
-            android:text="@string/jawaban" />
->>>>>>> e891dc99787937cf4528d12dc92ce9aba5a1c47d
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

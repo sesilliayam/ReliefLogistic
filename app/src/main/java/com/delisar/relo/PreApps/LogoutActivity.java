@@ -85,5 +85,6 @@ public class LogoutActivity extends AppCompatActivity {
 
     public void toDashboard(View view) {
         startActivity ( new Intent ( LogoutActivity.this, DashboardMain.class ) );
+        finish ();
     }
 }

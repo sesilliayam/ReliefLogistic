@@ -18,7 +18,6 @@ import com.delisar.relo.Category.CategoryMain;
 import com.delisar.relo.Community.CommunityMain;
 import com.delisar.relo.ContactUs.ContactUsMain;
 import com.delisar.relo.FAQ.FAQMain;
-import com.delisar.relo.PreApps.LoginActivity;
 import com.delisar.relo.PreApps.LogoutActivity;
 import com.delisar.relo.Profile.ImageActivity;
 import com.delisar.relo.R;
@@ -122,6 +121,7 @@ public class DashboardMain extends AppCompatActivity implements View.OnClickList
         } else if (id == R.id.action_logout){
 //            mAuth.signOut ();
             this.startActivity ( new Intent ( this, LogoutActivity.class ) );
+            finish ();
             return true;
         }
 

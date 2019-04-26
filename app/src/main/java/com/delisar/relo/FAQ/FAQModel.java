@@ -1,10 +1,10 @@
 package com.delisar.relo.FAQ;
 
-public class FAQ {
+public class FAQModel {
     private String tanya;
     private String jawab;
 
-    public FAQ (String tanya, String jawab) {
+    public FAQModel(String tanya, String jawab) {
         this.tanya = tanya;
         this.jawab = jawab;
     }
