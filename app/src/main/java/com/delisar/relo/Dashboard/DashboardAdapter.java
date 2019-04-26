@@ -1,6 +1,7 @@
 package com.delisar.relo.Dashboard;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,6 +10,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.delisar.relo.DetailNews;
+import com.delisar.relo.Profile.ImageActivity;
 import com.delisar.relo.R;
 
 import java.util.List;
@@ -16,6 +19,7 @@ import java.util.List;
 public class DashboardAdapter extends RecyclerView.Adapter<DashboardAdapter.NewsViewHolder> {
     private Context mContext;
     private List<News> newsList;
+
 
     public DashboardAdapter(Context mContext, List<News> newsList) {
         this.mContext = mContext;
@@ -60,14 +64,19 @@ public class DashboardAdapter extends RecyclerView.Adapter<DashboardAdapter.News
             textNews.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Toast.makeText(mContext, "Clicked Text", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(view.getContext(), DetailNews.class);
+                    view.getContext().startActivity(intent);
+
+                    //Toast.makeText(mContext, "Clicked Text", Toast.LENGTH_SHORT).show();
                 }
             });
         }
 
         @Override
         public void onClick(View view) {
-            Toast.makeText(mContext, titleNews.getText().toString(), Toast.LENGTH_SHORT).show();
+            //Toast.makeText(mContext, titleNews.getText().toString(), Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(view.getContext(), DetailNews.class);
+            view.getContext().startActivity(intent);
         }
     }
 

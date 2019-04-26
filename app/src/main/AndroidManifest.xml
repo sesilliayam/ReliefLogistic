@@ -22,8 +22,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".Setting.SettingsMain"></activity>
-        <activity android:name=".ChatActivity"></activity>
+        <activity android:name=".DetailNews"></activity>
+        <activity android:name=".Setting.SettingsMain" />
+        <activity android:name=".ChatActivity" />
         <activity android:name=".Profile.DisplayProfile" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
@@ -42,7 +43,7 @@
             android:label="@string/title_activity_image"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Profile.ImagePickerActivity" />
-        <activity android:name=".ContactUs.ContactUsMain"/>
+        <activity android:name=".ContactUs.ContactUsMain" />
         <activity
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps" />
@@ -65,7 +66,7 @@
         <activity
             android:name=".PreApps.LoginActivity"
             android:label="@string/title_activity_login" />
-        <activity android:name=".PreApps.LogoutActivity"/>
+        <activity android:name=".PreApps.LogoutActivity" />
         <activity android:name=".PreApps.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
