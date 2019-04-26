@@ -127,29 +127,29 @@ public class DashboardMain extends AppCompatActivity implements View.OnClickList
                 animateFAB();
                 break;
             case R.id.fab1:
-                //community
-                Intent intent = new Intent (DashboardMain.this, CommunityMain.class);
+                //profile
+                Intent intent = new Intent (DashboardMain.this, ImageActivity.class);
                 startActivity(intent);
                 Log.d("FAB1", "Fab 1");
                 break;
             case R.id.fab2:
-                //category
-                Intent intentCommunity = new Intent (DashboardMain.this, CategoryMain.class);
+                //community
+                Intent intentCommunity = new Intent (DashboardMain.this, CommunityMain.class);
                 startActivity(intentCommunity);
                 Log.d("FAB2", "Fab 2");
                 break;
             case R.id.fab3:
-                //history
+                //category
+                startActivity ( new Intent ( DashboardMain.this, CategoryMain.class ) );
                 Log.d("FAB3", "Fab 3");
                 break;
             case R.id.fab4:
-                //faq
-                Intent intentFAQ = new Intent (DashboardMain.this, FAQMain.class);
-                startActivity(intentFAQ);
                 Log.d("FAB4", "Fab 4");
                 break;
             case R.id.fab5:
-                //contactUs
+                //faq
+                Intent intentFAQ = new Intent (DashboardMain.this, FAQMain.class);
+                startActivity(intentFAQ);
                 Log.d("FAB5", "Fab 5");
                 break;
         }
