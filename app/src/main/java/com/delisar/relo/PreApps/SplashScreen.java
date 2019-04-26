@@ -1,4 +1,4 @@
-package com.delisar.relo;
+package com.delisar.relo.PreApps;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.CountDownTimer;
 import android.view.animation.AlphaAnimation;
 import android.widget.TextView;
+
+import com.delisar.relo.R;
 
 public class SplashScreen extends AppCompatActivity {
 
@@ -15,7 +17,7 @@ public class SplashScreen extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash_screen);
+        setContentView( R.layout.activity_splash_screen);
 
         //Setting SplashScreen
         fadeOut = new AlphaAnimation(0.0f, 1.0f);

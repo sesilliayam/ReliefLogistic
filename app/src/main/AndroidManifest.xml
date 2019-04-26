@@ -22,6 +22,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".Setting.SettingsMain"></activity>
         <activity android:name=".ChatActivity"></activity>
         <activity android:name=".Profile.DisplayProfile" />
         <!--
@@ -44,13 +45,13 @@
         <activity
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps" />
-        <activity android:name=".ForgotPassword" /> <!-- TRANSAKSI -->
+        <activity android:name=".PreApps.ForgotPassword" /> <!-- TRANSAKSI -->
         <activity android:name=".Transaksi.TransaksiMain" />
         <activity
             android:name=".Transaksi.TransaksiMaps"
             android:label="@string/title_activity_transaksi_maps" />
         <activity android:name=".Test" />
-        <activity android:name=".TermOfUse" />
+        <activity android:name=".PreApps.TermOfUse" />
         <activity android:name=".Community.CommunityDetail" />
         <activity android:name=".Community.CommunityMain" />
         <activity android:name=".FAQ.FAQMain" />
@@ -59,11 +60,11 @@
             android:name=".Dashboard.DashboardMain"
             android:label="@string/title_activity_dashboard"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Register" />
+        <activity android:name=".PreApps.Register" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".PreApps.LoginActivity"
             android:label="@string/title_activity_login" />
-        <activity android:name=".SplashScreen">
+        <activity android:name=".PreApps.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

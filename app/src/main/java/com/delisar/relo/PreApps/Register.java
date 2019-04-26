@@ -1,4 +1,4 @@
-package com.delisar.relo;
+package com.delisar.relo.PreApps;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
@@ -12,6 +12,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.delisar.relo.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -29,7 +30,7 @@ public class Register extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register);
+        setContentView( R.layout.activity_register);
 
         //Get Firebase auth instance
         auth = FirebaseAuth.getInstance();

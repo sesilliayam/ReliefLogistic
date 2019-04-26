@@ -1,4 +1,4 @@
-package com.delisar.relo;
+package com.delisar.relo.Dashboard;
 
 public class News {
     private int id;

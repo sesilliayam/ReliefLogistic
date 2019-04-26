@@ -18,8 +18,8 @@ import com.delisar.relo.Category.CategoryMain;
 import com.delisar.relo.Community.CommunityMain;
 import com.delisar.relo.FAQ.FAQMain;
 import com.delisar.relo.Profile.ImageActivity;
-import com.delisar.relo.News;
 import com.delisar.relo.R;
+import com.delisar.relo.Setting.SettingsMain;
 import com.delisar.relo.Transaksi.TransaksiMain;
 
 import java.util.ArrayList;
@@ -111,7 +111,11 @@ public class DashboardMain extends AppCompatActivity implements View.OnClickList
             Intent inten = new Intent ( this, ImageActivity.class );
             this.startActivity ( inten );
             return true;
+        } else if (id == R.id.action_settings){
+            this.startActivity ( new Intent ( this, SettingsMain.class ) );
+            return true;
         }
+
         return super.onOptionsItemSelected ( item );
     }
 
