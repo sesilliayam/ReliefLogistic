@@ -16,11 +16,15 @@ import android.view.animation.AnimationUtils;
 
 import com.delisar.relo.Category.CategoryMain;
 import com.delisar.relo.Community.CommunityMain;
+import com.delisar.relo.ContactUs.ContactUsMain;
 import com.delisar.relo.FAQ.FAQMain;
+import com.delisar.relo.PreApps.LoginActivity;
+import com.delisar.relo.PreApps.LogoutActivity;
 import com.delisar.relo.Profile.ImageActivity;
 import com.delisar.relo.R;
 import com.delisar.relo.Setting.SettingsMain;
 import com.delisar.relo.Transaksi.TransaksiMain;
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,6 +36,7 @@ public class DashboardMain extends AppCompatActivity implements View.OnClickList
     private Boolean isFabOpen = false;
     private FloatingActionButton fab,fab1,fab2, fab3, fab4, fab5, fab6;
     private Animation fab_open,fab_close,rotate_forward,rotate_backward;
+    FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -114,6 +119,10 @@ public class DashboardMain extends AppCompatActivity implements View.OnClickList
         } else if (id == R.id.action_settings){
             this.startActivity ( new Intent ( this, SettingsMain.class ) );
             return true;
+        } else if (id == R.id.action_logout){
+//            mAuth.signOut ();
+            this.startActivity ( new Intent ( this, LogoutActivity.class ) );
+            return true;
         }
 
         return super.onOptionsItemSelected ( item );
@@ -149,6 +158,7 @@ public class DashboardMain extends AppCompatActivity implements View.OnClickList
                 break;
             case R.id.fab5:
                 //contact us
+                startActivity ( new Intent ( DashboardMain.this, ContactUsMain.class ) );
                 Log.d("FAB5", "Fab 5");
                 break;
         }
