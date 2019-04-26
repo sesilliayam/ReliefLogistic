@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/white">
 
     <RelativeLayout xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:context="com.delisar.relo.CommunityDetail"
+        tools:context="com.delisar.relo.Community.CommunityDetail"
         android:background="@color/white">
 
         <ImageView
@@ -42,7 +43,8 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/newsTitleDetail"
             android:padding="16dp"
-            android:text="Detail Text" />
+            android:text="Detail Text"
+            android:fontFamily="@font/museo"/>
 
     </RelativeLayout>
 </ScrollView>
