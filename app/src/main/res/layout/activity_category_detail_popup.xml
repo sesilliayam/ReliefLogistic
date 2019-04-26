@@ -19,7 +19,7 @@
 
             <ImageView
                 android:id="@+id/ic_headDetail"
-                android:src="@drawable/ic_keranjang"
+                android:src="@drawable/ic_action_cat"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_marginTop="20dp"

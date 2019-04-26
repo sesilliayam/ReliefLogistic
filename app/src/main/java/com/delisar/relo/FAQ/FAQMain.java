@@ -12,7 +12,7 @@ import java.util.ArrayList;
 public class FAQMain extends AppCompatActivity {
     RecyclerView recyclerView;
     FAQAdapter adapter;
-    ArrayList<FAQ> FAQArrayList;
+    ArrayList<FAQModel> FAQArrayList;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,7 +30,9 @@ public class FAQMain extends AppCompatActivity {
     }
     private void addData() {
         FAQArrayList = new ArrayList<>();
-        FAQArrayList.add(new FAQ("Q : Bagaimana Berdonasi dengan RELO", "A: Donasi dapat dilakukan dengan langsung mengirim Donasi kealamat yang telah di tentukan saat melakukan Check Out di Relo"));
-        FAQArrayList.add(new FAQ("Q : Apakah bisa berdonasi dengan Uang di RELO", "A: Saat ini donasi yang diterima RELo hanyalah barang"));
+        FAQArrayList.add(new FAQModel ("Q : Bagaimana Berdonasi dengan RELO?", "A: Donasi dapat dilakukan dengan langsung mengirim Donasi kealamat yang telah di tentukan saat melakukan Check Out di Relo"));
+        FAQArrayList.add(new FAQModel ("Q : Apakah bisa berdonasi dengan Uang di RELO?", "A: Saat ini donasi yang diterima RELO hanyalah barang"));
+        FAQArrayList.add(new FAQModel ("Q : Bagaimana cara melakukan Donasi?", "Cari Komunitas yang membuka donasi, kemudian pilih kategori barang yang disumbangkan, lalu antar barang ke alamat komunitas tersebut"));
+        FAQArrayList.add(new FAQModel ("Q : Bisakah Donasi di kirim lewat ekspedisi ke alamat komunitas?", "Saat ini Donasi hanya bisa dikirim dengan sistem drop off donasi atau Pick Up by Community"));
     }
 }
