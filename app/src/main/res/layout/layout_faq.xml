@@ -21,7 +21,11 @@
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
+<<<<<<< HEAD
+        android:layout_height="87dp"
+=======
         android:layout_height="83dp"
+>>>>>>> e891dc99787937cf4528d12dc92ce9aba5a1c47d
         android:layout_margin="5dp"
         android:orientation="vertical"
         android:padding="5dp"
@@ -32,15 +36,23 @@
             android:id="@+id/txt_tanya"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+<<<<<<< HEAD
+            android:padding="5dp" />
+=======
             android:padding="5dp"
             android:text="@string/pertanyaan" />
+>>>>>>> e891dc99787937cf4528d12dc92ce9aba5a1c47d
 
         <TextView
             android:id="@+id/txt_jawab"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+<<<<<<< HEAD
+            android:padding="5dp" />
+=======
             android:padding="5dp"
             android:text="@string/jawaban" />
+>>>>>>> e891dc99787937cf4528d12dc92ce9aba5a1c47d
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

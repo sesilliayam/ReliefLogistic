@@ -9,10 +9,18 @@
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.INTERNET" />
+<<<<<<< HEAD
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+=======
+<<<<<<< HEAD
+=======
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+>>>>>>> e891dc99787937cf4528d12dc92ce9aba5a1c47d
+>>>>>>> 9ed04dc3d788702c07f85991d5a0771743e9058e
 
     <application
         android:allowBackup="true"
@@ -20,12 +28,22 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+<<<<<<< HEAD
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
         <activity android:name=".PreApps.LogoutActivity"></activity>
         <activity android:name=".Setting.SettingsMain" />
         <activity android:name=".ChatActivity" />
         <activity android:name=".Profile.DisplayProfile" />
+=======
+        android:theme="@style/AppTheme">
+<<<<<<< HEAD
+        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".Register" />
+        <activity android:name=".Profile" />
+=======
+
+>>>>>>> 9ed04dc3d788702c07f85991d5a0771743e9058e
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -62,7 +80,12 @@
             android:name=".Dashboard.DashboardMain"
             android:label="@string/title_activity_dashboard"
             android:theme="@style/AppTheme.NoActionBar" />
+<<<<<<< HEAD
         <activity android:name=".PreApps.Register" />
+=======
+        <activity android:name=".Register" />
+>>>>>>> e891dc99787937cf4528d12dc92ce9aba5a1c47d
+>>>>>>> 9ed04dc3d788702c07f85991d5a0771743e9058e
         <activity
             android:name=".PreApps.LoginActivity"
             android:label="@string/title_activity_login" />
