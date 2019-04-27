@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".DetailNews">
+    tools:context=".Dashboard.DetailNews">
 
     <TextView
         android:id="@+id/titleDetail"
@@ -14,7 +14,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
-        android:text="Title"
+        android:text="Banjarnegara Tanah Longsor"
         android:textColor="#ffa520"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -44,29 +44,45 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
-        android:text="@string/dummy"
+        android:text="@string/sampleBerita"
         android:textColor="#000000"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageDetail" />
 
-    <Button
-        android:id="@+id/submit"
-        android:layout_width="167dp"
+    <LinearLayout
+        app:layout_constraintTop_toBottomOf="@id/bodyDetail"
+        android:id="@+id/relativeDetailNews"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:background="@drawable/shape_rounded_primary"
-        android:onClick="Submit"
-        android:text="DONASI SEKARANG"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bodyDetail" />
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Show Location"
+            android:textStyle="italic"
+            android:textColor="@color/colorPrimary"
+            android:onClick="toMapsDetail"/>
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="167dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/shape_rounded_primary"
+            android:onClick="Submit"
+            android:text="DONASI SEKARANG"
+            android:textColor="@color/white"
+            />
+
+    </LinearLayout>
 
 
 </android.support.constraint.ConstraintLayout>

@@ -113,6 +113,9 @@
         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
         </string>
 
+    <string name="sampleBerita">Banjarnegara - Akibat hujan deras yang mengguyur Kabupaten Banjarnegara, Jateng, Jumat, (22/3) malam, membuat sejumlah akses jalan tertutup material longsor. Hingga saat ini, masih dalam pembersihan material tanah longsor agar bisa segera dilewati kendaraan.</string>
+    <string name="title_activity_dashboard_detail_maps">Map</string>
+
 
 </resources>
 
