@@ -38,4 +38,9 @@ public class DetailNews extends AppCompatActivity {
         }
 
     }
+
+    public void toMapsDetail(View view) {
+        startActivity ( new Intent ( this, DashboardDetailMaps.class ) );
+        finish ();
+    }
 }
