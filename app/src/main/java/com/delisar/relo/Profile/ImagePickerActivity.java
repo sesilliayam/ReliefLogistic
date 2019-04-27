@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
@@ -57,6 +58,7 @@ public class ImagePickerActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setupSharedPreferences ();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_image_picker);
 
@@ -251,5 +253,21 @@ public class ImagePickerActivity extends AppCompatActivity {
                 child.delete();
             }
         }
+    }
+
+    private void setupSharedPreferences() {
+        SharedPreferences prefs = getSharedPreferences(getPackageName(), MODE_PRIVATE);
+        toggleTheme(prefs.getBoolean("nightMode",false));
+
+    }
+
+    //memanggil tema
+    public void toggleTheme(Boolean bo){
+        if (bo){
+            setTheme(R.style.dark);
+        }else{
+            setTheme(R.style.light);
+        }
+
     }
 }

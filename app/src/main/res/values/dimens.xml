@@ -19,6 +19,6 @@
     <dimen name="icon_size">25dp</dimen>
     <dimen name="normalText">15dp</dimen>
     <dimen name="mediumText">18dp</dimen>
-    <dimen name="bigText">20dp</dimen>
+    <dimen name="bigText">25dp</dimen>
 
 </resources>

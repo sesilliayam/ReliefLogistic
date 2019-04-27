@@ -1,5 +1,6 @@
 package com.delisar.relo.FAQ;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -15,6 +16,7 @@ public class FAQMain extends AppCompatActivity {
     ArrayList<FAQModel> FAQArrayList;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setupSharedPreferences ();
         super.onCreate(savedInstanceState);
         setContentView( R.layout.activity_faq_main);
         addData();
@@ -34,5 +36,21 @@ public class FAQMain extends AppCompatActivity {
         FAQArrayList.add(new FAQModel ("Q : Apakah bisa berdonasi dengan Uang di RELO?", "A: Saat ini donasi yang diterima RELO hanyalah barang"));
         FAQArrayList.add(new FAQModel ("Q : Bagaimana cara melakukan Donasi?", "Cari Komunitas yang membuka donasi, kemudian pilih kategori barang yang disumbangkan, lalu antar barang ke alamat komunitas tersebut"));
         FAQArrayList.add(new FAQModel ("Q : Bisakah Donasi di kirim lewat ekspedisi ke alamat komunitas?", "Saat ini Donasi hanya bisa dikirim dengan sistem drop off donasi atau Pick Up by Community"));
+    }
+
+    private void setupSharedPreferences() {
+        SharedPreferences prefs = getSharedPreferences(getPackageName(), MODE_PRIVATE);
+        toggleTheme(prefs.getBoolean("nightMode",false));
+
+    }
+
+    //memanggil tema
+    public void toggleTheme(Boolean bo){
+        if (bo){
+            setTheme(R.style.dark);
+        }else{
+            setTheme(R.style.light);
+        }
+
     }
 }

@@ -1,5 +1,6 @@
 package com.delisar.relo.Community;
 
+import android.content.SharedPreferences;
 import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -22,6 +23,7 @@ public class CommunityMain extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setupSharedPreferences ();
         super.onCreate(savedInstanceState);
         setContentView( R.layout.activity_community_main );
         mRecyclerView = findViewById(R.id.recyclerView);
@@ -95,5 +97,20 @@ public class CommunityMain extends AppCompatActivity {
         mAdapter.notifyDataSetChanged();
     }
 
+    private void setupSharedPreferences() {
+        SharedPreferences prefs = getSharedPreferences(getPackageName(), MODE_PRIVATE);
+        toggleTheme(prefs.getBoolean("nightMode",false));
+
+    }
+
+    //memanggil tema
+    public void toggleTheme(Boolean bo){
+        if (bo){
+            setTheme(R.style.dark);
+        }else{
+            setTheme(R.style.light);
+        }
+
+    }
 
 }

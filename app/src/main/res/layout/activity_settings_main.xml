@@ -113,6 +113,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             android:background="@drawable/shape_rounded_primary"
             android:text="Save Settings"
+            android:onClick="saveSettings"
             android:textColor="@color/white"/>
 
     </android.support.constraint.ConstraintLayout>
