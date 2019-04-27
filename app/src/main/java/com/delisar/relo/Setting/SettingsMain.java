@@ -1,45 +1,81 @@
 package com.delisar.relo.Setting;
 
+
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.view.View;
+import android.widget.Switch;
 
+import com.delisar.relo.Dashboard.DashboardMain;
 import com.delisar.relo.R;
 
-public class SettingsMain extends AppCompatActivity {
 
-    Toolbar toolbarSettings;
+public class SettingsMain extends AppCompatActivity {
+    Switch nightMode, bigSize;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate ( savedInstanceState );
-        setContentView ( R.layout.activity_settings_main );
+        super.onCreate(savedInstanceState);
+        theme();
+        setContentView(R.layout.activity_settings_main);
 
-        toolbarSettings = findViewById ( R.id.toolbar_settings );
-        setSupportActionBar ( toolbarSettings );
+
+//        setSupportActionBar(new Toolbar());
+//        getSupportActionBar().setTitle("Setting"); // for set actionbar title
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        init();
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+    private void theme() {
+        SharedPreferences prefs = getSharedPreferences(getPackageName(), MODE_PRIVATE);
+        if (prefs.getBoolean("nightMode", false)) {
+            setTheme(R.style.dark);
+        } else {
+            setTheme(R.style.light);
         }
+    }
 
-        return super.onOptionsItemSelected(item);
+    private void init() {
+        SharedPreferences prefs = getSharedPreferences(getPackageName(), MODE_PRIVATE);
+
+        nightMode = findViewById(R.id.sw_nightMode);
+        bigSize = findViewById(R.id.sw_fontSize);
+        nightMode.setChecked(prefs.getBoolean("nightMode", false));
+        bigSize.setChecked(prefs.getBoolean("bigSize", false));
+    }
+
+    public void saveSettings(View view) {
+        SharedPreferences.Editor editor = getSharedPreferences(getPackageName(), MODE_PRIVATE).edit();
+        editor.putBoolean("nightMode", nightMode.isChecked());
+        editor.putBoolean("bigSize", bigSize.isChecked());
+        editor.apply();
+
+        if (nightMode.isChecked()) {
+            setTheme(R.style.dark);
+        } else {
+            setTheme( R.style.light);
+        }
+        if (bigSize.isChecked()){
+            bigSize.setTextSize(getResources().getDimension(R.dimen.bigText));
+            nightMode.setTextSize(getResources().getDimension(R.dimen.bigText));
+        }else{
+            bigSize.setTextSize(getResources().getDimension(R.dimen.normalText));
+            nightMode.setTextSize(getResources().getDimension(R.dimen.normalText));
+        }
+        recreate();
+        gotoHome();
+    }
+
+    private void gotoHome(){
+        startActivity(new Intent(SettingsMain.this, DashboardMain.class));
+        finish();
+    }
+
+    @Override
+    public void onBackPressed() {
+        gotoHome();
     }
 }

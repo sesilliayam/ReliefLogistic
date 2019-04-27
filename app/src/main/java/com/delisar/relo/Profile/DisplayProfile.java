@@ -2,6 +2,7 @@ package com.delisar.relo.Profile;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -24,7 +25,7 @@ public class DisplayProfile extends AppCompatActivity {
         profileName = findViewById(R.id.profile_text);
         profileEmail = findViewById(R.id.profile_email);
         profileImage = findViewById(R.id.profile_image);
-        signOut=findViewById(R.id.sign_out);
+        signOut=findViewById(R.id.btn_editProfile);
 
     }
 
@@ -33,5 +34,8 @@ public class DisplayProfile extends AppCompatActivity {
 //        Picasso.get().load(googleSignInAccount.getPhotoUrl()).centerInside().fit().into(profileImage);
         profileName.setText(googleSignInAccount.getDisplayName());
         profileEmail.setText(googleSignInAccount.getEmail());
+    }
+
+    public void toProfile(View view) {
     }
 }

@@ -1,6 +1,7 @@
 package com.delisar.relo.Dashboard;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
@@ -39,6 +40,7 @@ public class DashboardMain extends AppCompatActivity implements View.OnClickList
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setupSharedPreferences ();
         super.onCreate ( savedInstanceState );
         setContentView ( R.layout.activity_dashboard );
 
@@ -196,6 +198,20 @@ public class DashboardMain extends AppCompatActivity implements View.OnClickList
             isFabOpen = true;
             Log.d("FAB","open");
         }
+    }
+    private void setupSharedPreferences() {
+        SharedPreferences prefs = getSharedPreferences(getPackageName(), MODE_PRIVATE);
+        toggleTheme(prefs.getBoolean("nightMode", false));
+
+    }
+
+    public void toggleTheme(Boolean bo) {
+        if (bo) {
+            setTheme( R.style.dark);
+        } else {
+            setTheme(R.style.light);
+        }
+
     }
 }
 

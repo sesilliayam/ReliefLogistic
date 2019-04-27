@@ -44,6 +44,10 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
+    //Untuk Maps
+    implementation 'com.google.android.gms:play-services-maps:16.1.0'
+    implementation "com.google.android.gms:play-services:8.4.0"
+
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
@@ -81,15 +85,7 @@ dependencies {
     //Untuk Chat
     implementation 'com.scaledrone:scaledrone-java:0.6.0'
 
-    //untuk maps
-    implementation group: 'com.pubnub', name: 'pubnub-gson', version: '4.12.0'
-    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.9.2'
-    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: '2.9.2'
-    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.9.2'
-    implementation "com.google.android.gms:play-services-location:15.0.1"
-    implementation 'com.google.android.gms:play-services-maps:16.1.0'
-    implementation "com.google.android.gms:play-services:8.4.0"
-    implementation 'com.google.android.gms:play-services-places:10.0.1'
+
 }
 
 apply plugin: 'com.google.gms.google-services'

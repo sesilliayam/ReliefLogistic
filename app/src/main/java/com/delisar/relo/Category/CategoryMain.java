@@ -1,6 +1,7 @@
 package com.delisar.relo.Category;
 
 import android.app.Dialog;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.AppCompatActivity;
@@ -27,6 +28,7 @@ public class CategoryMain extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setupSharedPreferences();
         super.onCreate ( savedInstanceState );
         setContentView ( R.layout.activity_category_main );
 
@@ -70,5 +72,20 @@ public class CategoryMain extends AppCompatActivity {
         });
         mDialog.getWindow().setBackgroundDrawable(new ColorDrawable ( Color.TRANSPARENT));
         mDialog.show();
+    }
+
+    private void setupSharedPreferences() {
+        SharedPreferences prefs = getSharedPreferences(getPackageName(), MODE_PRIVATE);
+        toggleTheme(prefs.getBoolean("nightMode", false));
+
+    }
+
+    public void toggleTheme(Boolean bo) {
+        if (bo) {
+            setTheme( R.style.dark);
+        } else {
+            setTheme(R.style.light);
+        }
+
     }
 }
