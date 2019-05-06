@@ -33,17 +33,17 @@
 
 
     <string-array name="community_titles">
-        <item>Baseball</item>
-        <item>Badminton</item>
-        <item>Basketball</item>
-        <item>Bowling</item>
-        <item>Cycling</item>
-        <item>Golf</item>
-        <item>Running</item>
-        <item>Soccer</item>
-        <item>Swimming</item>
-        <item>Table Tennis</item>
-        <item>Tennis</item>
+        <item>Komunitas 1</item>
+        <item>Komunitas 2</item>
+        <item>Komunitas 3</item>
+        <item>Komunitas 1</item>
+        <item>Komunitas 2</item>
+        <item>Komunitas 3</item>
+        <item>Komunitas 1</item>
+        <item>Komunitas 2</item>
+        <item>Komunitas 3</item>
+        <item>Komunitas 1</item>
+        <item>Komunitas 2</item>
     </string-array>
 
     <string-array name="community_info">
@@ -65,17 +65,16 @@
 
 
     <array name="community_images">
-        <item>@drawable/img_baseball</item>
-        <item>@drawable/img_badminton</item>
-        <item>@drawable/img_basketball</item>
-        <item>@drawable/img_bowling</item>
-        <item>@drawable/img_cycling</item>
-        <item>@drawable/img_golf</item>
-        <item>@drawable/img_running</item>
-        <item>@drawable/img_soccer</item>
-        <item>@drawable/img_swimming</item>
-        <item>@drawable/img_tabletennis</item>
-        <item>@drawable/img_tennis</item>
+        <item>@drawable/img_komunitas</item>
+        <item>@drawable/img_komunitas1</item>
+        <item>@drawable/img_komunitas2</item>
+        <item>@drawable/img_komunitas</item>
+        <item>@drawable/img_komunitas1</item>
+        <item>@drawable/img_komunitas2</item>
+        <item>@drawable/img_komunitas</item>
+        <item>@drawable/img_komunitas1</item>
+        <item>@drawable/img_komunitas2</item>
+        <item>@drawable/img_komunitas</item>
 
     </array>
 
@@ -116,6 +115,10 @@
 
 Di antaranya, longsor terjadi di akses jalan Banjarnegara-Pekalongan di Kecamatan Wanayasa. Di lokasi tersebut, tebing dengan tinggi sekitar 10 meter mengalami longsor.</string>
     <string name="title_activity_maps_bencana">Map</string>
+
+    <string name="sampleBerita">Banjarnegara - Akibat hujan deras yang mengguyur Kabupaten Banjarnegara, Jateng, Jumat, (22/3) malam, membuat sejumlah akses jalan tertutup material longsor. Hingga saat ini, masih dalam pembersihan material tanah longsor agar bisa segera dilewati kendaraan.</string>
+    <string name="title_activity_dashboard_detail_maps">Map</string>
+
 
 
 </resources>

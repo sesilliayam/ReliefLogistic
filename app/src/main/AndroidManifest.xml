@@ -30,7 +30,6 @@
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
-
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -44,8 +43,8 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".Dashboard.MapsBencana"
-            android:label="@string/title_activity_maps_bencana"></activity>
+            android:name=".Dashboard.DashboardDetailMaps"
+            android:label="@string/title_activity_dashboard_detail_maps"></activity>
         <activity android:name=".Dashboard.DetailNews" />
         <activity android:name=".Setting.SettingsMain" />
         <activity android:name=".ChatActivity" />

@@ -205,10 +205,11 @@ public class DashboardMain extends AppCompatActivity implements View.OnClickList
 
     }
 
-    public void toggleTheme(Boolean bo) {
-        if (bo) {
-            setTheme( R.style.dark);
-        } else {
+    //memanggil tema
+    public void toggleTheme(Boolean bo){
+        if (bo){
+            setTheme(R.style.dark);
+        }else{
             setTheme(R.style.light);
         }
 
