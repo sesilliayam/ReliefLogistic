@@ -16,17 +16,14 @@ import java.util.Collections;
 
 public class CommunityMain extends AppCompatActivity {
 
+
     private RecyclerView mRecyclerView;
     private ArrayList<Community> mCommunityData;
     private CommunityAdapter mAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-<<<<<<< HEAD
-        setupSharedPreferences();
-=======
         setupSharedPreferences ();
->>>>>>> c508035fe738ab5917c6772ed4e560b9570883c0
         super.onCreate(savedInstanceState);
         setContentView( R.layout.activity_community_main );
         mRecyclerView = findViewById(R.id.recyclerView);
@@ -41,8 +38,8 @@ public class CommunityMain extends AppCompatActivity {
 
         ItemTouchHelper helper = new ItemTouchHelper(new ItemTouchHelper
                 .SimpleCallback(
-                    ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT |
-                    ItemTouchHelper.DOWN | ItemTouchHelper.UP,
+                ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT |
+                        ItemTouchHelper.DOWN | ItemTouchHelper.UP,
                 ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT) {
 
             @Override
@@ -102,16 +99,6 @@ public class CommunityMain extends AppCompatActivity {
 
     private void setupSharedPreferences() {
         SharedPreferences prefs = getSharedPreferences(getPackageName(), MODE_PRIVATE);
-<<<<<<< HEAD
-        toggleTheme(prefs.getBoolean("nightMode", false));
-
-    }
-
-    public void toggleTheme(Boolean bo) {
-        if (bo) {
-            setTheme(R.style.dark);
-        } else {
-=======
         toggleTheme(prefs.getBoolean("nightMode",false));
 
     }
@@ -121,14 +108,9 @@ public class CommunityMain extends AppCompatActivity {
         if (bo){
             setTheme(R.style.dark);
         }else{
->>>>>>> c508035fe738ab5917c6772ed4e560b9570883c0
             setTheme(R.style.light);
         }
 
     }
-<<<<<<< HEAD
-
-=======
->>>>>>> c508035fe738ab5917c6772ed4e560b9570883c0
 
 }

@@ -199,9 +199,10 @@ public class DashboardMain extends AppCompatActivity implements View.OnClickList
             Log.d("FAB","open");
         }
     }
+
     private void setupSharedPreferences() {
         SharedPreferences prefs = getSharedPreferences(getPackageName(), MODE_PRIVATE);
-        toggleTheme(prefs.getBoolean("nightMode", false));
+        toggleTheme(prefs.getBoolean("nightMode",false));
 
     }
 
@@ -215,4 +216,3 @@ public class DashboardMain extends AppCompatActivity implements View.OnClickList
 
     }
 }
-

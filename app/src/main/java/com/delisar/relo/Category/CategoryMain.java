@@ -28,11 +28,7 @@ public class CategoryMain extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-<<<<<<< HEAD
-        setupSharedPreferences();
-=======
         setupSharedPreferences ();
->>>>>>> c508035fe738ab5917c6772ed4e560b9570883c0
         super.onCreate ( savedInstanceState );
         setContentView ( R.layout.activity_category_main );
 
@@ -80,16 +76,6 @@ public class CategoryMain extends AppCompatActivity {
 
     private void setupSharedPreferences() {
         SharedPreferences prefs = getSharedPreferences(getPackageName(), MODE_PRIVATE);
-<<<<<<< HEAD
-        toggleTheme(prefs.getBoolean("nightMode", false));
-
-    }
-
-    public void toggleTheme(Boolean bo) {
-        if (bo) {
-            setTheme( R.style.dark);
-        } else {
-=======
         toggleTheme(prefs.getBoolean("nightMode",false));
 
     }
@@ -99,7 +85,6 @@ public class CategoryMain extends AppCompatActivity {
         if (bo){
             setTheme(R.style.dark);
         }else{
->>>>>>> c508035fe738ab5917c6772ed4e560b9570883c0
             setTheme(R.style.light);
         }
 
