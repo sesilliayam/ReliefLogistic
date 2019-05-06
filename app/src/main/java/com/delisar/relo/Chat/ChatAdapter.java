@@ -1,4 +1,4 @@
-package com.delisar.relo;
+package com.delisar.relo.Chat;
 
 import android.app.Activity;
 import android.content.Context;
@@ -9,6 +9,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
+
+import com.delisar.relo.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -51,7 +53,7 @@ public class ChatAdapter extends BaseAdapter {
         Chat message = messages.get(i);
 
         if (message.isBelongsToCurrentUser()) {
-            convertView = messageInflater.inflate(R.layout.my_message, null);
+            convertView = messageInflater.inflate( R.layout.my_message, null);
             holder.messageBody = (TextView) convertView.findViewById(R.id.message_body);
             convertView.setTag(holder);
             holder.messageBody.setText(message.getText());

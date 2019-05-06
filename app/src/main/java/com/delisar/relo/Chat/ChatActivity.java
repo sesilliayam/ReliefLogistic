@@ -1,4 +1,4 @@
-package com.delisar.relo;
+package com.delisar.relo.Chat;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -6,11 +6,10 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ListView;
 
+import com.delisar.relo.R;
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.scaledrone.lib.Listener;
-import com.scaledrone.lib.Member;
 import com.scaledrone.lib.Room;
 import com.scaledrone.lib.RoomListener;
 import com.scaledrone.lib.Scaledrone;
@@ -30,7 +29,7 @@ public class ChatActivity extends AppCompatActivity implements RoomListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_chat);
+        setContentView( R.layout.activity_chat);
 
         editText = (EditText) findViewById(R.id.editText);
 

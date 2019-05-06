@@ -47,7 +47,7 @@
             android:label="@string/title_activity_dashboard_detail_maps"></activity>
         <activity android:name=".Dashboard.DetailNews" />
         <activity android:name=".Setting.SettingsMain" />
-        <activity android:name=".ChatActivity" />
+        <activity android:name=".Chat.ChatActivity" />
         <activity android:name=".Profile.DisplayProfile" />
         <activity
             android:name=".Profile.ImageActivity"
@@ -56,14 +56,14 @@
         <activity android:name=".Profile.ImagePickerActivity" />
         <activity android:name=".ContactUs.ContactUsMain" />
         <activity
-            android:name=".MapsActivity"
+            android:name=".Tester.MapsActivity"
             android:label="@string/title_activity_maps" />
         <activity android:name=".PreApps.ForgotPassword" /> <!-- TRANSAKSI -->
         <activity android:name=".Transaksi.TransaksiMain" />
         <activity
             android:name=".Transaksi.TransaksiMaps"
             android:label="@string/title_activity_transaksi_maps" />
-        <activity android:name=".Test" />
+        <activity android:name=".Tester.Test" />
         <activity android:name=".PreApps.TermOfUse" />
         <activity android:name=".Community.CommunityDetail" />
         <activity android:name=".Community.CommunityMain" />
