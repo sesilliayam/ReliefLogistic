@@ -1,5 +1,6 @@
 package com.delisar.relo.ContactUs;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -20,6 +21,7 @@ public class ContactUsMain extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setupSharedPreferences ();
         super.onCreate(savedInstanceState);
         setContentView( R.layout.activity_contact_us_main);
         Log.d(TAG, "onCreate: started.");
@@ -49,5 +51,19 @@ public class ContactUsMain extends AppCompatActivity {
         ContactUsAdapter adapter = new ContactUsAdapter(this, mNames, mImageUrls);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+    }
+    private void setupSharedPreferences() {
+        SharedPreferences prefs = getSharedPreferences(getPackageName(), MODE_PRIVATE);
+        toggleTheme(prefs.getBoolean("nightMode", false));
+
+    }
+
+    public void toggleTheme(Boolean bo) {
+        if (bo) {
+            setTheme( R.style.dark);
+        } else {
+            setTheme(R.style.light);
+        }
+
     }
 }
