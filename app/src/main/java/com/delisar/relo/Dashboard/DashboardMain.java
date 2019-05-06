@@ -95,7 +95,11 @@ public class DashboardMain extends AppCompatActivity implements View.OnClickList
         ) );
 
         newsList.add ( new News ( 1, R.drawable.list1, "Banjir",
-                "If you'd like to create a list with cards, as shown in figure 2, also use the CardView widget as described in Create a Card-based" ) );
+                "If you'd like to create a list with cards, as shown in figure 2, also use the " +
+                        "CardView widget as described in Create a Card-based" ) );
+
+        newsList.add ( new News ( 1, R.drawable.list1, "Bencana X",
+                "khaskjdhakjshdahdkhadkjhaksdhkadhkajdh" ) );
 
         DashboardAdapter adapter = new DashboardAdapter ( this, newsList );
         recyclerView.setAdapter ( adapter );

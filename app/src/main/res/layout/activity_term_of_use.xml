@@ -63,7 +63,7 @@
 
         <Button
             android:id="@+id/btnKonfirmTerm"
-            android:background="@color/colorPrimary"
+            android:background="@drawable/shape_rounded_primary"
             android:textColor="@color/white"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
