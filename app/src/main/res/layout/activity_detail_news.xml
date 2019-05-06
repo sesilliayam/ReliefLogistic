@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
     tools:context=".Dashboard.DetailNews">
 
     <TextView
@@ -44,12 +43,13 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
-        android:text="@string/sampleBerita"
+        android:text="@string/berita_longsor"
         android:textColor="#000000"
-        android:textSize="18sp"
+        android:textSize="@dimen/normalText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageDetail" />
+
 
     <LinearLayout
         app:layout_constraintTop_toBottomOf="@id/bodyDetail"
@@ -65,7 +65,7 @@
             android:text="Show Location"
             android:textStyle="italic"
             android:textColor="@color/colorPrimary"
-            android:onClick="toMapsDetail"/>
+            android:onClick="toMapsBencana"/>
 
         <Button
             android:id="@+id/submit"
@@ -83,6 +83,5 @@
             />
 
     </LinearLayout>
-
-
+W
 </android.support.constraint.ConstraintLayout>

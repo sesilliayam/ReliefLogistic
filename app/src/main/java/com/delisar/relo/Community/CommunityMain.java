@@ -38,8 +38,8 @@ public class CommunityMain extends AppCompatActivity {
 
         ItemTouchHelper helper = new ItemTouchHelper(new ItemTouchHelper
                 .SimpleCallback(
-                    ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT |
-                    ItemTouchHelper.DOWN | ItemTouchHelper.UP,
+                ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT |
+                        ItemTouchHelper.DOWN | ItemTouchHelper.UP,
                 ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT) {
 
             @Override

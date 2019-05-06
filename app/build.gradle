@@ -84,6 +84,8 @@ dependencies {
 
     //Untuk Chat
     implementation 'com.scaledrone:scaledrone-java:0.6.0'
+
+
 }
 
 apply plugin: 'com.google.gms.google-services'

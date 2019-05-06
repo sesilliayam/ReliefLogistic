@@ -1,4 +1,4 @@
-package com.delisar.relo;
+package com.delisar.relo.Chat;
 
 public class Chat {
     private String text;
