@@ -80,7 +80,7 @@
             android:onClick="Submit"
             android:text="DONASI SEKARANG"
             android:textColor="@color/white"
-            />
+            android:layout_marginBottom="20dp"/>
 
     </LinearLayout>
 W
