@@ -23,7 +23,6 @@
                 android:id="@+id/txt_headTransaction"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
                 android:layout_marginBottom="20dp"
                 android:text="Personal Data"
                 android:textColor="@color/colorPrimary"
@@ -41,10 +40,9 @@
                     android:id="@+id/txt_nameTransaction"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
                     android:layout_alignParentTop="true"
                     android:text="Name"
-                    android:textSize="18dp" />
+                    android:textSize="@dimen/mediumText" />
 
                 <EditText
                     android:id="@+id/edt_nameTransaction"
@@ -66,7 +64,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Phone"
-                    android:textSize="18dp" />
+                    android:textSize="@dimen/mediumText" />
 
                 <EditText
                     android:id="@+id/edt_phoneTransaction"
@@ -88,7 +86,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Email"
-                    android:textSize="18dp" />
+                    android:textSize="@dimen/mediumText" />
 
                 <EditText
                     android:id="@+id/edt_emailTransaction"
@@ -110,7 +108,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Address"
-                    android:textSize="18dp" />
+                    android:textSize="@dimen/mediumText" />
 
                 <EditText
                     android:id="@+id/edt_addressTransaction"
@@ -119,57 +117,60 @@
                     android:layout_below="@id/txt_addressTransaction"
                     android:layout_marginBottom="20dp" />
 
-                <TextView
-                    android:id="@+id/txt_headTransaction_donation"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/edt_addressTransaction"
-                    android:layout_marginBottom="20dp"
-                    android:text="Donation"
-                    android:textColor="@color/colorPrimary"
-                    android:textSize="25dp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/txt_toTransaction"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/txt_headTransaction_donation"
-                    android:layout_marginBottom="10dp"
-                    android:text="To" />
-
-                <RelativeLayout
-                    android:id="@+id/relative_toCommunity"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/txt_toTransaction">
-
-                    <ImageView
-                        android:id="@+id/ic_location"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:layout_alignParentStart="true"
-                        android:onClick="ToMaps"
-                        android:layout_alignParentLeft="true"
-                        android:layout_marginStart="0dp"
-                        android:layout_marginLeft="0dp"
-                        android:layout_marginRight="10dp"
-                        android:src="@drawable/ic_location"
-                        android:tint="@color/darkGrey" />
-                    <EditText
-                        android:id="@+id/edt_lokasiTransaksi"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_toRightOf="@+id/ic_location"
-                        />
-
-
-
-                </RelativeLayout>
-
-
             </RelativeLayout>
 
+            <TextView
+                android:id="@+id/txt_headTransaction_donation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relative_addressTransaction"
+                android:layout_marginBottom="20dp"
+                android:text="Donation"
+                android:textColor="@color/colorPrimary"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_toDonation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_headTransaction_donation"
+                android:text="To"
+                android:textSize="@dimen/mediumText" />
+
+            <EditText
+                android:id="@+id/edt_toDonation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_toDonation"
+                android:layout_marginBottom="20dp"
+                android:textSize="@dimen/mediumText" />
+
+            <TextView
+                android:id="@+id/txt_donationCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edt_toDonation"
+                android:text="Item Category"
+                android:textSize="@dimen/mediumText" />
+
+            <Spinner
+                android:id="@+id/sp_categoryDonation"
+                android:layout_below="@id/txt_donationCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+            </Spinner>
+
+            <Button
+                android:id="@+id/btn_donation"
+                android:layout_below="@id/sp_categoryDonation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_rounded_primary"
+                android:text="Donate Now!"
+                android:textColor="@color/white" />
 
         </RelativeLayout>
 
