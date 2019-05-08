@@ -26,7 +26,9 @@ public class HistoryMain extends AppCompatActivity {
     RecyclerView recyclerView;
     private ArrayList<Transaksi> arrayHistory;
     private HistoryAdapter historyAdapter;
-//    Dialog mDialog;
+//
+    //deklarasi database
+    
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +56,7 @@ public class HistoryMain extends AppCompatActivity {
         arrayHistory = new ArrayList<>();
         arrayHistory.add(new Transaksi ("Category 1", "Barang jangka panjang"));
         arrayHistory.add(new Transaksi ("Category 2", "Barang jangka pendek"));
+
     }
 
     public void toDetail(View v) {
