@@ -25,7 +25,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".History.HistoryMain"></activity>
+        <activity android:name=".AdminRole"></activity>
+        <activity android:name=".History.HistoryMain" />
         <activity android:name=".ContactUsNew.ContactUsNew" />
 
         <meta-data
