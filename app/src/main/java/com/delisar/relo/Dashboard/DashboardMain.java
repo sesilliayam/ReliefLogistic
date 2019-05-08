@@ -19,7 +19,7 @@ import com.delisar.relo.Category.CategoryMain;
 import com.delisar.relo.Community.CommunityMain;
 import com.delisar.relo.ContactUs.ContactUsMain;
 import com.delisar.relo.FAQ.FAQMain;
-import com.delisar.relo.History.HistoryMain;
+import com.delisar.relo.Transaksi.HistoryMain;
 import com.delisar.relo.PreApps.LogoutActivity;
 import com.delisar.relo.Profile.ImageActivity;
 import com.delisar.relo.R;

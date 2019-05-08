@@ -16,6 +16,12 @@ public class Transaksi {
 
     }
 
+    //constructor just two parameters
+    public Transaksi (String head, String date){
+        this.toDonationWho = head;
+        this.dateTransaction = date;
+    }
+
     //constructor
     public Transaksi(String name, String phone, String email, String address, String toDonation,
                      String item, String desc, String dateTransaction){
