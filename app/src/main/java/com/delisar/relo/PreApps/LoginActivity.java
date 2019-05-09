@@ -8,11 +8,14 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.delisar.relo.AdminRole;
 import com.delisar.relo.Dashboard.DashboardMain;
 import com.delisar.relo.R;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
@@ -35,6 +38,8 @@ public class LoginActivity extends AppCompatActivity {
     private GoogleSignInClient googleSignInClient;
     private static final String TAG = "AndroidClarified";
 
+    Spinner roleLogin;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate ( savedInstanceState );
@@ -55,6 +60,9 @@ public class LoginActivity extends AppCompatActivity {
         btnLogin = findViewById ( R.id.btn_login );
         btnLoginGoogle = findViewById ( R.id.btn_loginGoogle );
         progressBar = findViewById ( R.id.progressBar );
+        roleLogin = (Spinner) findViewById(R.id.sp_roleLogin);
+        ArrayAdapter <CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.role, R.layout.support_simple_spinner_dropdown_item);
+        roleLogin.setAdapter(adapter);
 
         //LOGIN WITH GOOGLE
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -75,6 +83,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String email = loginEmail.getText ().toString ();
                 final String password = loginPassword.getText ().toString ();
+                String item = roleLogin.getSelectedItem().toString();
 
                 //validasi
                 if (TextUtils.isEmpty ( email )){
@@ -90,29 +99,37 @@ public class LoginActivity extends AppCompatActivity {
                 //progressbar muncul
                 progressBar.setVisibility ( View.VISIBLE );
 
-                //autentikasi user
-                auth.signInWithEmailAndPassword ( email,password )
-                        .addOnCompleteListener ( LoginActivity.this, new OnCompleteListener<AuthResult> () {
-                            @Override
-                            public void onComplete(@NonNull Task<AuthResult> task) {
-                                // If sign in fails, display a message to the user. If sign in succeeds
-                                // the auth state listener will be notified and logic to handle the
-                                // signed in user can be handled in the listener.
-                                progressBar.setVisibility ( View.GONE );
-                                if (!task.isSuccessful ()){
-                                    //kalo ada error
-                                    if (password.length () < 6){
-                                        loginPassword.setError ( getString ( R.string.minimum_password) );
+                //kondisi dimana admin atau user
+                if (loginEmail.getText().toString().equals("admin@gmail.com") && loginPassword.getText().toString().equals("admin") && item.equals("Admin")) {
+                    Intent adminIntent = new Intent(LoginActivity.this, AdminRole.class);
+                    startActivity(adminIntent);
+                } else {
+                    //autentikasi user
+                    auth.signInWithEmailAndPassword ( email,password )
+                            .addOnCompleteListener ( LoginActivity.this, new OnCompleteListener<AuthResult> () {
+                                @Override
+                                public void onComplete(@NonNull Task<AuthResult> task) {
+                                    // If sign in fails, display a message to the user. If sign in succeeds
+                                    // the auth state listener will be notified and logic to handle the
+                                    // signed in user can be handled in the listener.
+                                    progressBar.setVisibility ( View.GONE );
+                                    if (!task.isSuccessful ()){
+                                        //kalo ada error
+                                        if (password.length () < 6){
+                                            loginPassword.setError ( getString ( R.string.minimum_password) );
+                                        } else {
+                                            Toast.makeText ( LoginActivity.this, getString ( R.string.auth_failed ), Toast.LENGTH_LONG ).show ();
+                                        }
                                     } else {
-                                        Toast.makeText ( LoginActivity.this, getString ( R.string.auth_failed ), Toast.LENGTH_LONG ).show ();
+                                        Intent intent = new Intent ( LoginActivity.this, DashboardMain.class );
+                                        startActivity ( intent );
+                                        finish ();
                                     }
-                                } else {
-                                    Intent intent = new Intent ( LoginActivity.this, DashboardMain.class );
-                                    startActivity ( intent );
-                                    finish ();
                                 }
-                            }
-                        } );
+                            } );
+                }
+
+
             }
         } );
     }
