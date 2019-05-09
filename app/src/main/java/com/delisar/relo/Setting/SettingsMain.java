@@ -13,6 +13,7 @@ import com.delisar.relo.R;
 
 
 public class SettingsMain extends AppCompatActivity {
+    //this is a comment
     Switch nightMode, bigSize;
 
     @Override
