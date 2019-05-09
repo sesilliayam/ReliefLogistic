@@ -49,7 +49,8 @@
                     android:id="@+id/edt_nameTransaction"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/txt_nameTransaction" />
+                    android:layout_below="@id/txt_nameTransaction"
+                    android:inputType="textCapWords"/>
 
             </RelativeLayout>
 
@@ -116,6 +117,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/txt_addressTransaction"
+                    android:inputType="textCapSentences"
                     android:layout_marginBottom="20dp" />
 
             </RelativeLayout>
@@ -144,6 +146,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/txt_toDonation"
+                android:inputType="textCapSentences"
                 android:layout_marginBottom="20dp"
                 android:textSize="@dimen/mediumText" />
 
@@ -171,14 +174,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Description"
-                android:textSize="@dimen/mediumText"/>
+                android:textSize="@dimen/mediumText"
+                />
 
             <EditText
                 android:id="@+id/edt_description"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/mediumText"
-                android:layout_marginBottom="20dp"/>
+                android:layout_marginBottom="20dp"
+                android:inputType="textCapSentences"/>
 
             <Button
                 android:id="@+id/btn_donation"
