@@ -56,8 +56,8 @@ public class HistoryMain extends AppCompatActivity {
     //mengisi arraylist dengan method addData
     public void addDataHistory(){
         arrayHistory = new ArrayList<>();
-//        arrayHistory.add(new Transaksi ("Category 1", "Barang jangka panjang"));
-//        arrayHistory.add(new Transaksi ("Category 2", "Barang jangka pendek"));
+        arrayHistory.add(new Transaksi ("Untuk Korban Tanah Longsor Banjarnegara", "09-05-2019"));
+        arrayHistory.add(new Transaksi ("Untuk Banjir Badung", "09-05-2019"));
         DatabaseReference database = FirebaseDatabase.getInstance().getReference ();
         DatabaseReference reference = database.child ( "Transaksi" );
 
