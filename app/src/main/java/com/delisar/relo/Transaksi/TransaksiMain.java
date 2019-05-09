@@ -190,7 +190,7 @@ public class TransaksiMain extends AppCompatActivity {
                     Transaksis.add(Transaksi);
                 }
 //                //creating Userlist adapter
-//                UserList UserAdapter = new UserList(MainActivity.this, Users);
+//                UserList UserAdapter = new UserList(MainActivity.this, Users);l
 //                //attaching adapter to the listview
 //                listViewUsers.setAdapter(UserAdapter);
             }
