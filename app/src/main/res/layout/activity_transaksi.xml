@@ -3,21 +3,22 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     tools:context=".Transaksi.TransaksiMain">
 
     <ScrollView
         android:id="@+id/scroll_mainTransactions"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        >
 
-        <RelativeLayout
+        <LinearLayout
             android:id="@+id/relative_mainTransaction"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="30dp">
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/txt_headTransaction"
@@ -48,7 +49,8 @@
                     android:id="@+id/edt_nameTransaction"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/txt_nameTransaction" />
+                    android:layout_below="@id/txt_nameTransaction"
+                    android:inputType="textCapWords"/>
 
             </RelativeLayout>
 
@@ -115,6 +117,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/txt_addressTransaction"
+                    android:inputType="textCapSentences"
                     android:layout_marginBottom="20dp" />
 
             </RelativeLayout>
@@ -143,6 +146,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/txt_toDonation"
+                android:inputType="textCapSentences"
                 android:layout_marginBottom="20dp"
                 android:textSize="@dimen/mediumText" />
 
@@ -159,9 +163,27 @@
                 android:layout_below="@id/txt_donationCategory"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                >
+                android:spinnerMode="dropdown"
+                android:dropDownWidth="match_parent"
+                android:layout_marginBottom="20dp">
 
             </Spinner>
+
+            <TextView
+                android:id="@+id/txt_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Description"
+                android:textSize="@dimen/mediumText"
+                />
+
+            <EditText
+                android:id="@+id/edt_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/mediumText"
+                android:layout_marginBottom="20dp"
+                android:inputType="textCapSentences"/>
 
             <Button
                 android:id="@+id/btn_donation"
@@ -170,9 +192,10 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/shape_rounded_primary"
                 android:text="Donate Now!"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:layout_marginBottom="60dp"/>
 
-        </RelativeLayout>
+        </LinearLayout>
 
     </ScrollView>
 

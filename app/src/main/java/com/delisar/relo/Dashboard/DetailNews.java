@@ -39,7 +39,7 @@ public class DetailNews extends AppCompatActivity {
 
     }
 
-    public void toMapsDetail(View view) {
+    public void toMapsBencana(View view) {
         startActivity ( new Intent ( this, DashboardDetailMaps.class ) );
         finish ();
     }

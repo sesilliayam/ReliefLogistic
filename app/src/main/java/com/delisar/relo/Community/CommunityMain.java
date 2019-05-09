@@ -1,5 +1,6 @@
 package com.delisar.relo.Community;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.TypedArray;
 import android.os.Bundle;
@@ -7,7 +8,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.helper.ItemTouchHelper;
+import android.view.View;
 
+import com.delisar.relo.Chat.ChatActivity;
 import com.delisar.relo.R;
 
 import java.util.ArrayList;
@@ -113,4 +116,7 @@ public class CommunityMain extends AppCompatActivity {
 
     }
 
+    public void Chat(View view) {
+        Intent intent = new Intent(CommunityMain.this, ChatActivity.class);
+    }
 }

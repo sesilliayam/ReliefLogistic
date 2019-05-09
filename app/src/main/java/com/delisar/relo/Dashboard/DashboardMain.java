@@ -18,8 +18,9 @@ import android.view.animation.AnimationUtils;
 import com.delisar.relo.Category.CategoryMain;
 import com.delisar.relo.Community.CommunityMain;
 import com.delisar.relo.ContactUs.ContactUsMain;
+import com.delisar.relo.ContactUsNew.ContactUsNew;
 import com.delisar.relo.FAQ.FAQMain;
-import com.delisar.relo.History.HistoryMain;
+import com.delisar.relo.Transaksi.HistoryMain;
 import com.delisar.relo.PreApps.LogoutActivity;
 import com.delisar.relo.Profile.ImageActivity;
 import com.delisar.relo.R;
@@ -166,7 +167,7 @@ public class DashboardMain extends AppCompatActivity implements View.OnClickList
                 break;
             case R.id.fab5:
                 //contact us
-                startActivity ( new Intent ( DashboardMain.this, ContactUsMain.class ) );
+                startActivity ( new Intent ( DashboardMain.this, ContactUsNew.class ) );
                 Log.d("FAB5", "Fab 5");
                 break;
         }
