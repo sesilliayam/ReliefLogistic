@@ -17,6 +17,8 @@ import android.widget.TextView;
 import com.delisar.relo.Category.CategoryAdapter;
 import com.delisar.relo.Category.CategoryMain;
 import com.delisar.relo.R;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
 
@@ -28,7 +30,7 @@ public class HistoryMain extends AppCompatActivity {
     private HistoryAdapter historyAdapter;
 //
     //deklarasi database
-    
+    DatabaseReference databaseReference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,8 +56,10 @@ public class HistoryMain extends AppCompatActivity {
     //mengisi arraylist dengan method addData
     public void addDataHistory(){
         arrayHistory = new ArrayList<>();
-        arrayHistory.add(new Transaksi ("Category 1", "Barang jangka panjang"));
-        arrayHistory.add(new Transaksi ("Category 2", "Barang jangka pendek"));
+//        arrayHistory.add(new Transaksi ("Category 1", "Barang jangka panjang"));
+//        arrayHistory.add(new Transaksi ("Category 2", "Barang jangka pendek"));
+        DatabaseReference database = FirebaseDatabase.getInstance().getReference ();
+        DatabaseReference reference = database.child ( "Transaksi" );
 
     }
 
