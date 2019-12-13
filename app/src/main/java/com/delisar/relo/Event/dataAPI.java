@@ -3,7 +3,7 @@ package com.delisar.relo.Event;
 import com.google.gson.annotations.SerializedName;
 
 public class dataAPI {
-    @SerializedName ( "title" )
+    @SerializedName ( "na" )
     private String title;
 
     public dataAPI(String title) {

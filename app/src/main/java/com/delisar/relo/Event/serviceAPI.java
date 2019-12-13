@@ -5,7 +5,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class serviceAPI {
     private static Retrofit retrofit;
-    private static final String BASE_URL = "https:/api.themoviedb.org/3/";
+    private static final String BASE_URL = "192.168.0.102:8080/api/event";
 
     public static Retrofit getAPIdata() {
 
