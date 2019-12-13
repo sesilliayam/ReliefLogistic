@@ -46,6 +46,21 @@
     <android.support.design.widget.FloatingActionButton
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
+        android:id="@+id/fab7"
+        android:src="@drawable/ic_action_contact"
+        app:pressedTranslationZ="12dp"
+        app:elevation="6dp"
+        app:backgroundTint="@color/colorFAB1"
+        android:visibility="invisible"
+        android:layout_marginRight="16dp"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="370dp"
+        app:fab_label="FAQ"
+        />
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
         android:id="@+id/fab5"
         android:src="@drawable/ic_action_contact"
         app:pressedTranslationZ="12dp"
@@ -76,7 +91,7 @@
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:id="@+id/fab3"
-        android:src="@drawable/ic_action_history"
+        android:src="@drawable/ic_logo"
         app:pressedTranslationZ="12dp"
         app:elevation="6dp"
         app:backgroundTint="@color/colorFAB1"

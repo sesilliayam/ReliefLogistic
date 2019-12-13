@@ -1,21 +1,12 @@
 package com.delisar.relo.Transaksi;
 
-import android.app.Dialog;
 import android.content.SharedPreferences;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.ListAdapter;
-import android.widget.TextView;
 
-import com.delisar.relo.Category.CategoryAdapter;
-import com.delisar.relo.Category.CategoryMain;
 import com.delisar.relo.R;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -36,7 +27,7 @@ public class HistoryMain extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         setupSharedPreferences ();
         super.onCreate ( savedInstanceState );
-        setContentView ( R.layout.activity_history_main );
+        setContentView ( R.layout.activity_event );
 
 //        mDialog = new Dialog ( this );
 

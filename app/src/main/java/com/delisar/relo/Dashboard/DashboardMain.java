@@ -19,6 +19,7 @@ import com.delisar.relo.Category.CategoryMain;
 import com.delisar.relo.Community.CommunityMain;
 import com.delisar.relo.ContactUs.ContactUsMain;
 import com.delisar.relo.ContactUsNew.ContactUsNew;
+import com.delisar.relo.Event.EventMain;
 import com.delisar.relo.FAQ.FAQMain;
 import com.delisar.relo.Transaksi.HistoryMain;
 import com.delisar.relo.PreApps.LogoutActivity;
@@ -36,7 +37,7 @@ public class DashboardMain extends AppCompatActivity implements View.OnClickList
     List<News> newsList;
     RecyclerView recyclerView;
     private Boolean isFabOpen = false;
-    private FloatingActionButton fab,fab1,fab2, fab3, fab4, fab5, fab6;
+    private FloatingActionButton fab,fab1,fab2, fab3, fab4, fab5, fab6,fab7;
     private Animation fab_open,fab_close,rotate_forward,rotate_backward;
     FirebaseAuth mAuth;
 
@@ -59,6 +60,8 @@ public class DashboardMain extends AppCompatActivity implements View.OnClickList
         fab3 = (FloatingActionButton) findViewById(R.id.fab3);
         fab4 = (FloatingActionButton) findViewById(R.id.fab4);
         fab5 = (FloatingActionButton) findViewById(R.id.fab5);
+        fab7 = (FloatingActionButton) findViewById(R.id.fab7);
+
         fab6 = (FloatingActionButton) findViewById(R.id.fab6);
 
 
@@ -81,6 +84,7 @@ public class DashboardMain extends AppCompatActivity implements View.OnClickList
         fab3.setOnClickListener(this);
         fab4.setOnClickListener(this);
         fab5.setOnClickListener(this);
+        fab7.setOnClickListener(this);
 
         recyclerView = (RecyclerView) findViewById ( R.id.recyclerView );
         recyclerView.setHasFixedSize ( true );
@@ -156,7 +160,7 @@ public class DashboardMain extends AppCompatActivity implements View.OnClickList
                 break;
             case R.id.fab3:
                 //history
-                startActivity ( new Intent ( DashboardMain.this, HistoryMain.class ) );
+                startActivity ( new Intent ( DashboardMain.this, EventMain.class ) );
                 Log.d("FAB3", "Fab 3");
                 break;
             case R.id.fab4:
@@ -167,6 +171,11 @@ public class DashboardMain extends AppCompatActivity implements View.OnClickList
                 break;
             case R.id.fab5:
                 //contact us
+                startActivity ( new Intent ( DashboardMain.this, ContactUsNew.class ) );
+                Log.d("FAB5", "Fab 5");
+                break;
+            case R.id.fab7:
+                //event
                 startActivity ( new Intent ( DashboardMain.this, ContactUsNew.class ) );
                 Log.d("FAB5", "Fab 5");
                 break;
@@ -181,11 +190,13 @@ public class DashboardMain extends AppCompatActivity implements View.OnClickList
             fab3.startAnimation(fab_close);
             fab4.startAnimation(fab_close);
             fab5.startAnimation(fab_close);
+            fab7.startAnimation(fab_close);
             fab1.setClickable(false);
             fab2.setClickable(false);
             fab3.setClickable(false);
             fab4.setClickable(false);
             fab5.setClickable(false);
+            fab7.setClickable(false);
 
             isFabOpen = false;
             Log.d("FAB", "close");
@@ -196,11 +207,13 @@ public class DashboardMain extends AppCompatActivity implements View.OnClickList
             fab3.startAnimation(fab_open);
             fab4.startAnimation(fab_open);
             fab5.startAnimation(fab_open);
+            fab7.startAnimation(fab_open);
             fab1.setClickable(true);
             fab2.setClickable(true);
             fab3.setClickable(true);
             fab4.setClickable(true);
             fab5.setClickable(true);
+            fab7.setClickable(true);
 
             isFabOpen = true;
             Log.d("FAB","open");

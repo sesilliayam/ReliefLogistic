@@ -22,13 +22,13 @@
             android:id="@+id/ic_regist"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:src="@drawable/ic_action_history"
-            android:tint="@color/white"/>
+            android:src="@drawable/ic_logo"
+            android:tint="@color/white" />
         <TextView
             android:id="@+id/txt_itemCategory"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="HISTORI TRANSAKSI"
+            android:text="EVENT ALAM"
             android:textSize="22sp"
             android:layout_marginTop="5dp"
             android:textAlignment="center"
